@@ -100,30 +100,6 @@
 </ul>
 <p> 这么写：</p>
 <p> ![你的帅照] (balabla.com balabala  ps.后面这些是鼠标右击复制图片地址然后放上面的)</p>
-<h3 id="无序列表"><a href="#无序列表" class="headerlink" title="无序列表"></a>无序列表</h3><p>使用星号字符‘*’放在前面，会自动变成点点</p>
-<p>效果是酱紫的：</p>
-<ul>
-<li>哈</li>
-<li>哈哈哈</li>
-</ul>
-<h3 id="分割线"><a href="#分割线" class="headerlink" title="分割线"></a>分割线</h3><p>使用3个或多于3个的‘-’进行连接（用*来代替也可以）<br>效果如下：</p>
-<hr>
-<hr>
-<hr>
-<h3 id="字体"><a href="#字体" class="headerlink" title="字体"></a>字体</h3><p>使用对称形式的星星字符‘*’来夹包住文字，可以对文字进行斜体或加粗</p>
-<p><em>这里是包含斜体内容</em></p>
-<p><strong>这里是加粗</strong> </p>
-<h3 id="代码块"><a href="#代码块" class="headerlink" title="代码块"></a>代码块</h3><ul>
-<li>单行代码块</li>
-</ul>
-<p>使用单个反单引号进行包裹代码，例如 <code> int x=1;</code></p>
-<ul>
-<li>多行代码块</li>
-</ul>
-<p>通过三个反引号将代码包裹起来，反引号单独占据一行,放在开头</p>
-<p>例如：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">package main</span><br><span class="line">import &quot;fmt&quot;</span><br><span class="line"></span><br><span class="line">func main()&#123;</span><br><span class="line">    fmt.Println(&quot;Hello,World!&quot;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
 ]]></content>
       <categories>
         <category>生活感慨</category>
