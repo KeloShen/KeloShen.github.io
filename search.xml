@@ -1,22 +1,79 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Hello World</title>
-    <url>/2023/01/17/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+    <title>Hexo博客搭建路程</title>
+    <url>/2023/01/18/%E5%BB%BA%E7%AB%8B%E5%8D%9A%E5%AE%A2%E8%BF%99%E5%87%A0%E5%A4%A9%E7%9A%84%E4%BD%93%E4%BC%9A/</url>
+    <content><![CDATA[<h1 id="三天搭建HEXO之路"><a href="#三天搭建HEXO之路" class="headerlink" title="三天搭建HEXO之路"></a>三天搭建HEXO之路</h1><h2 id="没有头绪"><a href="#没有头绪" class="headerlink" title="没有头绪"></a>没有头绪</h2><p>第一天,我是在网上刷到别人做笔记的方式,看到别人在计算机课上用手写记笔记,我感觉很搞笑,我平常都是打字出来的(或者不做笔记emmm这样不对),然后看到评论区有大佬说记笔记是要在自己的博客上记,这样对自己的能力又锻炼,且方便高效,对未来面试也有帮助.</p>
+<p>啊哈,看到这个我可兴奋了,这不就是跟建立自己的网站一样吗,我觉得非常的酷,然后就在网上寻找教程,开启了碰壁之路……</p>
+<h3 id="Mac还是Win"><a href="#Mac还是Win" class="headerlink" title="Mac还是Win?"></a>Mac还是Win?</h3><p>我现在有两台电脑,一台是高一时候买的MacBook Pro2019版,一台是高考后暑假拿到的HP战99,经过我一些时间的使用对比,有如下的总结:</p>
+ <span id="more"></span>
 
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+<blockquote>
+<p>Mac相对于我的HP本</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>优点</p>
+</blockquote>
+</blockquote>
+<ul>
+<li><p>显示屏素质更加优秀,色彩更准,长时间观看眼睛没那么疼</p>
+</li>
+<li><p>音响好,听音乐的时候更舒适</p>
+</li>
+<li><p>生态好,苹果全家桶,设备之间传输文件或者传输一段网站地址时懒得一个字母一个字母敲都可以直接复制粘贴</p>
+</li>
+<li><p>触控板,使用感受极佳,出去自习的时候可以根本不用带鼠标</p>
+</li>
+<li><p>UI设计更加简洁</p>
+</li>
+</ul>
+<blockquote>
+<blockquote>
+<p>缺点</p>
+</blockquote>
+</blockquote>
+<ul>
+<li><p>一些软件不支持Mac系统,比如我使用到的EasyX以及Keil5,我的单片机无法连接</p>
+</li>
+<li><p>只有四个雷电接口,需要额外加拓展坞</p>
+</li>
+<li><p>网上的许多教程都是基于Win系统进行的,所以找到基于Mac系统的教程很麻烦</p>
+</li>
+</ul>
+<p>以上是我大一第一学期使用下来的综合感受,平常我喜欢使用Mac进行学习,此次搭建博客我一开始也是使用Mac进行。</p>
+<p>但是,两个我都试了一下,最后现在我还是推荐使用win进行hexo博客搭建!</p>
+<h2 id="见招拆招"><a href="#见招拆招" class="headerlink" title="见招拆招"></a>见招拆招</h2><p>在b站上查了许多视频教程,大多的制作比较粗糙,我选了几个我个人觉得比较好的进行推荐:</p>
+<blockquote>
+<p>基于Mac系统(缺点是制作时间比较早)</p>
+</blockquote>
+<p><a href="https://www.bilibili.com/video/BV1Yb411a7ty/?spm_id_from=333.1007.top_right_bar_window_history.content.click">CodeSheep的Hexo博客教程 2019</a></p>
+<blockquote>
+<p>基于win系统的(最新的是2022年进行的)</p>
+</blockquote>
+<p><a href="https://www.bilibili.com/video/BV1qD4y1z783/?spm_id_from=333.337.search-card.all.click&vd_source=72297e320b9c9f2a8ce440eed8f502e0">愛扑bug的熊的Hexo博客教程 2022</a></p>
+<p><a href="https://www.bilibili.com/video/BV1mU4y1j72n/?spm_id_from=333.788.recommend_more_video.1&vd_source=72297e320b9c9f2a8ce440eed8f502e0">火_花喔的Hexo博客教程 2021</a></p>
+<p>过程中会遇到很多问题,需要自己在网上进行查阅解决我的第一个问题就是在输入用户密码之后提醒我:</p>
+<p>Support for password authentication was removed on August 13,2021.Please use a personal access token instead.</p>
+<p>这个就是因为2019年的时候GitHub还没有推出token,所以视频里没有教程解决,只能网上解决,我找到了比较好的解决方法,如下:</p>
+<p><a href="https://blog.csdn.net/qq_38800316/article/details/120679506">token解决</a></p>
+<p>后面的问题很多,就不一一写出来,大部分问题解决方法我都收藏了,放在下面的链接中,希望能对大家有所帮助</p>
+<p><a href="https://i.csdn.net/#/user-center/collection-list?type=1&folder=25633096&key=1">hexo博客搭建中遇到的问题解决方法</a></p>
+<h2 id="前功尽弃"><a href="#前功尽弃" class="headerlink" title="前功尽弃"></a>前功尽弃</h2><p>因为快要过年回家了,我想要带着Windows本回去,所以想着能不能多台设备进行博客内容推送,我找了三个博主写的内容,进行下来不但没有成功,Mac上面也不能进行内容推送更新了,这个时候我的内心是崩溃的,历时两天的辛苦,我都付诸东流了,但是我没有放弃,我把上面写的文件都保存下来,在win上面重新进行搭建,搭建的时候我才发现,很多在Mac上面会出现的问题,在win上面很轻松的就会解决了,这也是为什么我最终还是推荐用win进行博客搭建。</p>
+<h2 id="感受"><a href="#感受" class="headerlink" title="感受"></a>感受</h2><h3 id="学习计算机很需要耐心"><a href="#学习计算机很需要耐心" class="headerlink" title="学习计算机很需要耐心"></a>学习计算机很需要耐心</h3><p>这么说应该不太准确，事实上我们想要做好每一件事都需要很大的耐心，不过在计算机实际操作过程中会遇到很多问题，我们都需要自己一个个进行查找解决方法，不能太过于急躁，也不能轻易说放弃</p>
+<h3 id="实践出真知"><a href="#实践出真知" class="headerlink" title="实践出真知"></a>实践出真知</h3><p>计算机实践是实现成本最低的工科学科了吧，只需要坐在电脑前敲敲键盘就能实现，所以不能懒，觉得自己脑袋懂了就懒得进行实践。在博客上进行内容推送就是一种实践，通过实践我们会对于知识有更加深刻的记忆与认识。</p>
+<p>懒得动手应该是我最大的问题了，高中的时候我就喜欢躺在床上看网课，觉得自己把知识理解就好了，也懒得动手做题，可是这样经常会在考试这种高压环境下使我的知识无法灵活运用，甚至有时候会是使学到的产生偏差，导致考试难以拿到高分。</p>
+<h3 id="英语很重要"><a href="#英语很重要" class="headerlink" title="英语很重要"></a>英语很重要</h3><p>英语能力很重要,高等教育中许多优秀的教材都是国外进行编辑的,都是使用英文,并且计算机语言就是使用英文进行发家的,尽管在本科阶段学习英语不会对我们进行太多的影响,大家对英语的认识就只是四六级,但是如果想要读研、进行深度的学习，英语必须要学习好，不能进行松懈，不可以让高中英语成为我们学习的巅峰。</p>
+<p>下面我分享一本计算机英语教材：</p>
+<p>[计算机英语](链接: <a href="https://pan.baidu.com/s/10viOmJOETZqTT8razUHESg?pwd=sapg">https://pan.baidu.com/s/10viOmJOETZqTT8razUHESg?pwd=sapg</a> 提取码: sapg 复制这段内容后打开百度网盘手机App，操作更方便哦<br>–来自百度网盘超级会员v5的分享)</p>
 ]]></content>
+      <categories>
+        <category>生活记录</category>
+      </categories>
+      <tags>
+        <tag>随笔</tag>
+        <tag>Hexo</tag>
+      </tags>
   </entry>
   <entry>
     <title>My First Blog In My Life</title>
@@ -24,6 +81,8 @@
     <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>  欢迎来到我的博客网站，希望通过这个网站可以给你带来帮助。</p>
 <p>  在偶然一次看到小红书评论的时候知道了可以通过博客来记录自己的学习笔记，并且可以对未来招聘也有帮助，所以花了一天的时间来搭建这个博客，希望自己未来能够经常在此记录自己的学习、情感、生活上的感悟，一直坚持努力下去。</p>
 <p>  如果你也想搭建自己的博客，可以观看这个视频进行学习</p>
+  <span id="more"></span>
+
 <p>  <a href="https://www.bilibili.com/video/BV1Yb411a7ty/?spm_id_from=333.1007.top_right_bar_window_history.content.click">博客教程</a></p>
 <h2 id="Mac终端中常用的输入指令（基于hexo博客教程）"><a href="#Mac终端中常用的输入指令（基于hexo博客教程）" class="headerlink" title="Mac终端中常用的输入指令（基于hexo博客教程）"></a>Mac终端中常用的输入指令（基于hexo博客教程）</h2><ul>
 <li><p>sudo su       切换root用户</p>
@@ -38,10 +97,6 @@
 </li>
 <li><p>cnpm install -g hexo-cli       是hexo博客安装</p>
 </li>
-</ul>
- <span id="more"></span>
-
-<ul>
 <li><p>hexo -v  检查</p>
 </li>
 <li><p>pwd   查看当前路径</p>
@@ -146,10 +201,31 @@
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">package main</span><br><span class="line">import &quot;fmt&quot;</span><br><span class="line"></span><br><span class="line">func main()&#123;</span><br><span class="line">    fmt.Println(&quot;Hello,World!&quot;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 ]]></content>
       <categories>
-        <category>生活感慨</category>
+        <category>生活记录</category>
       </categories>
       <tags>
         <tag>随笔</tag>
+        <tag>Hexo</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>Hello World</title>
+    <url>/2023/01/17/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<span id="more"></span>
+
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
   </entry>
 </search>
