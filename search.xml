@@ -242,4 +242,45 @@
         <tag>Hexo</tag>
       </tags>
   </entry>
+  <entry>
+    <title>网页搜索技巧</title>
+    <url>/2023/01/29/%E7%BD%91%E9%A1%B5%E6%90%9C%E7%B4%A2%E5%BF%AB%E6%8D%B7%E6%96%B9%E6%B3%95/</url>
+    <content><![CDATA[<h1 id="网页搜索快捷方法"><a href="#网页搜索快捷方法" class="headerlink" title="网页搜索快捷方法"></a>网页搜索快捷方法</h1><h2 id="1-精准搜索：双引号"><a href="#1-精准搜索：双引号" class="headerlink" title="1.精准搜索：双引号"></a>1.精准搜索：双引号</h2><p>如果想要搜索固定的字符串，可以在关键词左右加上双引号，免去关键词的分词搜索</p>
+<p>例如：</p>
+<p>高数资料文档 更改为 “高数资料文档”</p>
+<h2 id="2-模糊搜索：-星号"><a href="#2-模糊搜索：-星号" class="headerlink" title="2.模糊搜索： 星号"></a>2.模糊搜索： 星号</h2><p>当你只记得一本书中的句子，但是不记得书的名字的时候，可以在关键词前面加上星号*进行模糊搜索</p>
+<p>例如：</p>
+<p>*本没有路</p>
+<span id="more"></span>
+
+<h2 id="3-剔除搜索-：减号"><a href="#3-剔除搜索-：减号" class="headerlink" title="3.剔除搜索 ：减号"></a>3.剔除搜索 ：减号</h2><p>缩小查询范围，去除无关的搜索可以在关键词后面加减号-</p>
+<p>例如：</p>
+<p>数码产品 -广告</p>
+<h2 id="4-并行搜索：竖杠号"><a href="#4-并行搜索：竖杠号" class="headerlink" title="4.并行搜索：竖杠号"></a>4.并行搜索：竖杠号</h2><p>如果想搜索两个关键词，但两个关键词并不连贯的时候，可以使用竖杠号｜将关键词分开，</p>
+<p>关键词1+空格+竖杠+空格+关键词2</p>
+<p>例如：</p>
+<p>计算机 ｜ 电脑</p>
+<h2 id="5-书本-x2F-影视搜索：书名号"><a href="#5-书本-x2F-影视搜索：书名号" class="headerlink" title="5.书本&#x2F;影视搜索：书名号"></a>5.书本&#x2F;影视搜索：书名号</h2><p>如果想搜索书本影视方面的资料，可以在关键词两侧加入书名号《》</p>
+<p>例如：</p>
+<p>《数码》</p>
+<h2 id="6-搜索指定网站的关键信息：site"><a href="#6-搜索指定网站的关键信息：site" class="headerlink" title="6.搜索指定网站的关键信息：site"></a>6.搜索指定网站的关键信息：site</h2><p>想要直接搜索某个网站内部的关键信息时可以使用 关键词+site+冒号+站点域名</p>
+<p>例如：</p>
+<p>数码 site：baike.baidu.com</p>
+<h2 id="7-标题限定词搜索：intitle"><a href="#7-标题限定词搜索：intitle" class="headerlink" title="7.标题限定词搜索：intitle"></a>7.标题限定词搜索：intitle</h2><p>用intitle+冒号+关键词可以进行搜索限定，注意冒号必须是半角符号</p>
+<h2 id="8-文档搜索：filetype"><a href="#8-文档搜索：filetype" class="headerlink" title="8.文档搜索：filetype"></a>8.文档搜索：filetype</h2><p>搜索某个课程的文档可以用 关键词+filetype+冒号+文档格式</p>
+<p>例如：</p>
+<p>高等数学 filetype：doc</p>
+<p><img src="https://pic.imgdb.cn/item/63d5ea35face21e9efe1e8f3.png" alt="举例"></p>
+<p>本篇技巧来源于b站</p>
+<p><a href="https://www.bilibili.com/video/BV1uT4y1Y7nd/?spm_id_from=333.999.0.0&vd_source=72297e320b9c9f2a8ce440eed8f502e0">9个浏览器搜索小技巧</a></p>
+<p>另外还有自定义搜索引擎的快捷方法可以观看以下视频</p>
+<p><a href="https://www.bilibili.com/video/BV16t4y1C7d1/?spm_id_from=333.999.0.0&vd_source=72297e320b9c9f2a8ce440eed8f502e0">自定义搜索引擎</a></p>
+]]></content>
+      <categories>
+        <category>日常技巧</category>
+      </categories>
+      <tags>
+        <tag>Web</tag>
+      </tags>
+  </entry>
 </search>
