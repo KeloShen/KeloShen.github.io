@@ -1,108 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Hello World</title>
-    <url>/2023/01/17/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<span id="more"></span>
-
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
-  </entry>
-  <entry>
-    <title>Hexo博客搭建路程</title>
-    <url>/2023/01/18/%E5%BB%BA%E7%AB%8B%E5%8D%9A%E5%AE%A2%E8%BF%99%E5%87%A0%E5%A4%A9%E7%9A%84%E4%BD%93%E4%BC%9A/</url>
-    <content><![CDATA[<h1 id="三天搭建HEXO之路"><a href="#三天搭建HEXO之路" class="headerlink" title="三天搭建HEXO之路"></a>三天搭建HEXO之路</h1><h2 id="没有头绪"><a href="#没有头绪" class="headerlink" title="没有头绪"></a>没有头绪</h2><p>第一天,我是在网上刷到别人做笔记的方式,看到别人在计算机课上用手写记笔记,我感觉很搞笑,我平常都是打字出来的(或者不做笔记emmm这样不对),然后看到评论区有大佬说记笔记是要在自己的博客上记,这样对自己的能力又锻炼,且方便高效,对未来面试也有帮助.</p>
-<p>啊哈,看到这个我可兴奋了,这不就是跟建立自己的网站一样吗,我觉得非常的酷,然后就在网上寻找教程,开启了碰壁之路……</p>
-<h3 id="Mac还是Win"><a href="#Mac还是Win" class="headerlink" title="Mac还是Win?"></a>Mac还是Win?</h3><p>我现在有两台电脑,一台是高一时候买的MacBook Pro2019版,一台是高考后暑假拿到的HP战99,经过我一些时间的使用对比,有如下的总结:</p>
- <span id="more"></span>
-
-<blockquote>
-<p>Mac相对于我的HP本</p>
-</blockquote>
-<blockquote>
-<blockquote>
-<p>优点</p>
-</blockquote>
-</blockquote>
-<ul>
-<li><p>显示屏素质更加优秀,色彩更准,长时间观看眼睛没那么疼</p>
-</li>
-<li><p>音响好,听音乐的时候更舒适</p>
-</li>
-<li><p>触控板,使用感受极佳,出去自习的时候可以根本不用带鼠标</p>
-</li>
-<li><p>UI设计更加简洁</p>
-</li>
-<li><p>生态好,苹果全家桶,设备之间传输文件或者传输一段网站地址时懒得一个字母一个字母敲都可以直接复制粘贴</p>
-</li>
-</ul>
-<p>这里分享一个网站,方便win电脑和iOS设备进行传输图片以及文件</p>
-<p><a href="https://snapdrop.net/">Snapdrop</a></p>
-<p><img src="https://pic.imgdb.cn/item/63c94402be43e0d30e1ae7be.png" alt="snapdrop使用图片"><br>ps:win里的截屏快捷键:win+shift+s</p>
-<blockquote>
-<blockquote>
-<p>缺点</p>
-</blockquote>
-</blockquote>
-<ul>
-<li><p>一些软件不支持Mac系统,比如我使用到的EasyX以及Keil5,我的单片机无法连接</p>
-</li>
-<li><p>只有四个雷电接口,需要额外加拓展坞</p>
-</li>
-<li><p>网上的许多教程都是基于Win系统进行的,所以找到基于Mac系统的教程很麻烦</p>
-</li>
-</ul>
-<p>以上是我大一第一学期使用下来的综合感受,平常我喜欢使用Mac进行学习,此次搭建博客我一开始也是使用Mac进行。</p>
-<p>但是,两个我都试了一下,最后现在我还是推荐使用win进行hexo博客搭建!</p>
-<h2 id="见招拆招"><a href="#见招拆招" class="headerlink" title="见招拆招"></a>见招拆招</h2><p>在b站上查了许多视频教程,大多的制作比较粗糙,我选了几个我个人觉得比较好的进行推荐:</p>
-<blockquote>
-<p>基于Mac系统(缺点是制作时间比较早)</p>
-</blockquote>
-<p><a href="https://www.bilibili.com/video/BV1Yb411a7ty/?spm_id_from=333.1007.top_right_bar_window_history.content.click">CodeSheep的Hexo博客教程 2019</a></p>
-<blockquote>
-<p>基于win系统的(最新的是2022年进行的)</p>
-</blockquote>
-<p><a href="https://www.bilibili.com/video/BV1qD4y1z783/?spm_id_from=333.337.search-card.all.click&vd_source=72297e320b9c9f2a8ce440eed8f502e0">愛扑bug的熊的Hexo博客教程 2022</a></p>
-<p><a href="https://www.bilibili.com/video/BV1mU4y1j72n/?spm_id_from=333.788.recommend_more_video.1&vd_source=72297e320b9c9f2a8ce440eed8f502e0">火_花喔的Hexo博客教程 2021</a></p>
-<p>过程中会遇到很多问题,需要自己在网上进行查阅解决我的第一个问题就是在输入用户密码之后提醒我:</p>
-<p>Support for password authentication was removed on August 13,2021.Please use a personal access token instead.</p>
-<p>这个就是因为2019年的时候GitHub还没有推出token,所以视频里没有教程解决,只能网上解决,我找到了比较好的解决方法,如下:</p>
-<p><a href="https://blog.csdn.net/qq_38800316/article/details/120679506">token解决</a></p>
-<p>后面的问题很多,就不一一写出来,大部分问题解决方法我都收藏了,放在下面的链接中,希望能对大家有所帮助</p>
-<p><a href="https://i.csdn.net/#/user-center/collection-list?type=1&folder=25633096&key=1">hexo博客搭建中遇到的问题解决方法</a></p>
-<h2 id="前功尽弃"><a href="#前功尽弃" class="headerlink" title="前功尽弃"></a>前功尽弃</h2><p>因为快要过年回家了,我想要带着Windows本回去,所以想着能不能多台设备进行博客内容推送,我找了三个博主写的内容,进行下来不但没有成功,Mac上面也不能进行内容推送更新了,这个时候我的内心是崩溃的,历时两天的辛苦,我都付诸东流了,但是我没有放弃,我把上面写的文件都保存下来,在win上面重新进行搭建,搭建的时候我才发现,很多在Mac上面会出现的问题,在win上面很轻松的就会解决了,这也是为什么我最终还是推荐用win进行博客搭建。</p>
-<h2 id="感受"><a href="#感受" class="headerlink" title="感受"></a>感受</h2><h3 id="学习计算机很需要耐心"><a href="#学习计算机很需要耐心" class="headerlink" title="学习计算机很需要耐心"></a>学习计算机很需要耐心</h3><p>这么说应该不太准确，事实上我们想要做好每一件事都需要很大的耐心，不过在计算机实际操作过程中会遇到很多问题，我们都需要自己一个个进行查找解决方法，不能太过于急躁，也不能轻易说放弃</p>
-<h3 id="实践出真知"><a href="#实践出真知" class="headerlink" title="实践出真知"></a>实践出真知</h3><p>计算机实践是实现成本最低的工科学科了吧，只需要坐在电脑前敲敲键盘就能实现，所以不能懒，觉得自己脑袋懂了就懒得进行实践。在博客上进行内容推送就是一种实践，通过实践我们会对于知识有更加深刻的记忆与认识。</p>
-<p>懒得动手应该是我最大的问题了，高中的时候我就喜欢躺在床上看网课，觉得自己把知识理解就好了，也懒得动手做题，可是这样经常会在考试这种高压环境下使我的知识无法灵活运用，甚至有时候会是使学到的产生偏差，导致考试难以拿到高分。</p>
-<h3 id="英语很重要"><a href="#英语很重要" class="headerlink" title="英语很重要"></a>英语很重要</h3><p>英语能力很重要,高等教育中许多优秀的教材都是国外进行编辑的,都是使用英文,并且计算机语言就是使用英文进行发家的,尽管在本科阶段学习英语不会对我们进行太多的影响,大家对英语的认识就只是四六级,但是如果想要读研、进行深度的学习，英语必须要学习好，不能进行松懈，不可以让高中英语成为我们学习的巅峰。</p>
-<p>下面我分享一本计算机英语教材：</p>
-<p>[计算机英语](链接: <a href="https://pan.baidu.com/s/10viOmJOETZqTT8razUHESg?pwd=sapg">https://pan.baidu.com/s/10viOmJOETZqTT8razUHESg?pwd=sapg</a> 提取码: sapg 复制这段内容后打开百度网盘手机App，操作更方便哦<br>–来自百度网盘超级会员v5的分享)</p>
-]]></content>
-      <categories>
-        <category>生活记录</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title></title>
+    <title>51单片机学习</title>
     <url>/2023/02/19/51%E5%8D%95%E7%89%87%E6%9C%BA/</url>
     <content><![CDATA[<h1 id="点亮LED"><a href="#点亮LED" class="headerlink" title="点亮LED"></a>点亮LED</h1><h2 id="点亮一个LED"><a href="#点亮一个LED" class="headerlink" title="点亮一个LED"></a>点亮一个LED</h2><p>原理：控制LED负极口，使其接收低电平，然后点亮<br>对P2口进行操作</p>
 <p>MCU上的CPU控制寄存器（P2），寄存器连接驱动器，驱动器连接引脚（I&#x2F;O口）进一步来控制电路<br>寄存器写一个值，就会传到IO口上，同时，寄存器还会检测IO口的电平，读回到寄存器中</p>
 <p>对CPU写1，输出高电平（5v），对CPU写0，输出低电平（0v）</p>
+ <span id="more"></span>
+
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#include &lt;REGX52.H&gt; //右键insert</span><br><span class="line"></span><br><span class="line">Void main()&#123;</span><br><span class="line">P2=0xFE; //1111 1110</span><br><span class="line">While(1) //兜圈子</span><br><span class="line">	&#123;</span><br><span class="line"></span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <h2 id="LED闪烁"><a href="#LED闪烁" class="headerlink" title="LED闪烁"></a>LED闪烁</h2><p>单片机中的频率为MHz，速度很快，需要使用延时函数进行操作才可以看亮灭变化<br>软件自带延时计算器<br>指令集STC-Y1<br>频率看晶振上面写的数字</p>
@@ -139,7 +44,7 @@
 
 <h2 id="独立按键控制LED显示二进制"><a href="#独立按键控制LED显示二进制" class="headerlink" title="独立按键控制LED显示二进制"></a>独立按键控制LED显示二进制</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">void main()</span><br><span class="line">&#123; unsigned char LEDNum=0;//引入一个0，对它进行操作，再赋给P2</span><br><span class="line">	while(1)</span><br><span class="line">	&#123;</span><br><span class="line">			if(P3_1==0)//按下按键</span><br><span class="line">		&#123;</span><br><span class="line">			Delay(20); //避免按下时的抖动影响</span><br><span class="line">			while(P3_1==0); //按下的时候还没有松开，这个时候一直循环不操作直到松开</span><br><span class="line">			Delay(20); //松开，避免松开时抖动的影响</span><br><span class="line">			</span><br><span class="line">			//P2原本都是高电平，为 1111 1111</span><br><span class="line">			</span><br><span class="line">			LEDNum++;</span><br><span class="line">			P2=~LEDNum;</span><br><span class="line">			</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<h2 id="独立按键控制LED移位"><a href="#独立按键控制LED移位" class="headerlink" title="独立按键控制LED移位"></a>独立按键控制LED移位</h2><h2 id="数码管"><a href="#数码管" class="headerlink" title="数码管"></a>数码管</h2><h2 id="静态数码管显示"><a href="#静态数码管显示" class="headerlink" title="静态数码管显示"></a>静态数码管显示</h2><p>138译码器和数码管都是控制显示的<br>数码引脚管分为共阴极引脚以及共阳极引脚，数码管与引脚连接遵循就近原则<br>本开发板为共阴极连接 </p>
+<h2 id="独立按键控制LED移位"><a href="#独立按键控制LED移位" class="headerlink" title="独立按键控制LED移位"></a>独立按键控制LED移位</h2><h1 id="数码管"><a href="#数码管" class="headerlink" title="数码管"></a>数码管</h1><h2 id="静态数码管显示"><a href="#静态数码管显示" class="headerlink" title="静态数码管显示"></a>静态数码管显示</h2><p>138译码器和数码管都是控制显示的<br>数码引脚管分为共阴极引脚以及共阳极引脚，数码管与引脚连接遵循就近原则<br>本开发板为共阴极连接 </p>
 <ul>
 <li>一位数码管图片见【4-1】7:51</li>
 </ul>
@@ -174,7 +79,7 @@
 <h2 id="LCD1602调试工具"><a href="#LCD1602调试工具" class="headerlink" title="LCD1602调试工具"></a>LCD1602调试工具</h2><p>此液晶屏也可以作为调试窗口，提供类似于printf函数的功能<br>提供的函数图片</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#include &lt;REGX52.H&gt;</span><br><span class="line">#include &quot;LCD1602.h&quot;</span><br><span class="line">#include &quot;Delay.h&quot;</span><br><span class="line"></span><br><span class="line">void main()&#123;</span><br><span class="line">	LCD_Init();</span><br><span class="line">	LCD_ShowChar(1,1,&#x27;A&#x27;);//row1,column1,charA</span><br><span class="line">	LCD_String(1,3,&quot;Hello&quot;);</span><br><span class="line">	LCD_ShowNum(1,9,123,3);</span><br><span class="line">	LCD_ShowSignedNum(1,13,-66,2);//符号不算位数</span><br><span class="line">	LCD_ShowHexNum(2,1,0xAA8,2);//16进制数</span><br><span class="line">	LCD_ShowBinNum(2,4,0xAA,8);//2进制数</span><br><span class="line"></span><br><span class="line">	while(1)&#123;&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<h2 id="矩阵键盘"><a href="#矩阵键盘" class="headerlink" title="矩阵键盘"></a>矩阵键盘</h2><p>基于LCD1602显示屏调试<br>矩阵形式减少io口占用</p>
+<h1 id="矩阵键盘"><a href="#矩阵键盘" class="headerlink" title="矩阵键盘"></a>矩阵键盘</h1><p>基于LCD1602显示屏调试<br>矩阵形式减少io口占用</p>
 <p>&#x3D;&#x3D;扫描的概念&#x3D;&#x3D;  </p>
 <ul>
 <li><p>数码管扫描（输出扫描）<br>原理：显示第一位–》显示第二位–》显示第三位–》然后快速循环这个过程，最终实现所有数码管同时显示</p>
@@ -193,52 +98,37 @@
 
 <h2 id="矩阵键盘密码锁"><a href="#矩阵键盘密码锁" class="headerlink" title="矩阵键盘密码锁"></a>矩阵键盘密码锁</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#include &lt;REGX52.H&gt;</span><br><span class="line">#include &quot;Delay.h&quot;</span><br><span class="line">#include &quot;LCD1602.h&quot;</span><br><span class="line">#include &quot;MatrixKey.h&quot;</span><br><span class="line"></span><br><span class="line">unsigned char KeyNum;</span><br><span class="line">unsigned int Password,Count;</span><br><span class="line"></span><br><span class="line">void main()</span><br><span class="line">&#123;</span><br><span class="line">	LCD_Init();</span><br><span class="line">	LCD_ShowString(1,1,&quot;Password:&quot;);</span><br><span class="line">	while(1)</span><br><span class="line">	&#123;</span><br><span class="line">		KeyNum=MatrixKey();</span><br><span class="line">		if(KeyNum)</span><br><span class="line">		&#123;</span><br><span class="line">			if(KeyNum&lt;=10)	//如果S1~S10按键按下，输入密码</span><br><span class="line">			&#123;</span><br><span class="line">				if(Count&lt;4)	//如果输入次数小于4</span><br><span class="line">				&#123;</span><br><span class="line">					Password*=10;				//密码左移一位</span><br><span class="line">					Password+=KeyNum%10;		//获取一位密码</span><br><span class="line">					Count++;	//计次加一</span><br><span class="line">				&#125;</span><br><span class="line">				LCD_ShowNum(2,1,Password,4);	//更新显示</span><br><span class="line">			&#125;</span><br><span class="line">			if(KeyNum==11)	//如果S11按键按下，确认</span><br><span class="line">			&#123;</span><br><span class="line">				if(Password==2345)	//如果密码等于正确密码</span><br><span class="line">				&#123;</span><br><span class="line">					LCD_ShowString(1,14,&quot;OK &quot;);	//显示OK</span><br><span class="line">					Password=0;		//密码清零</span><br><span class="line">					Count=0;		//计次清零</span><br><span class="line">					LCD_ShowNum(2,1,Password,4);	//更新显示</span><br><span class="line">				&#125;</span><br><span class="line">				else				//否则</span><br><span class="line">				&#123;</span><br><span class="line">					LCD_ShowString(1,14,&quot;ERR&quot;);	//显示ERR</span><br><span class="line">					Password=0;		//密码清零</span><br><span class="line">					Count=0;		//计次清零</span><br><span class="line">					LCD_ShowNum(2,1,Password,4);	//更新显示</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">			if(KeyNum==12)	//如果S12按键按下，取消</span><br><span class="line">			&#123;</span><br><span class="line">				Password=0;		//密码清零</span><br><span class="line">				Count=0;		//计次清零</span><br><span class="line">				LCD_ShowNum(2,1,Password,4);	//更新显示</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-<h2 id="定时器"><a href="#定时器" class="headerlink" title="定时器"></a>定时器</h2><p>属于单片机的内部资源<br>可实现软件计时，替代长时间的delay，提高CPU运行效率和速度（Delay函数运行时，CPU无法进行别的操作）</p>
+<h1 id="定时器"><a href="#定时器" class="headerlink" title="定时器"></a>定时器</h1><p>属于单片机的内部资源<br>可实现软件计时，替代长时间的delay，提高CPU运行效率和速度（Delay函数运行时，CPU无法进行别的操作）</p>
 <p>控制位、计时器、时钟</p>
 <p>SYSclk：系统时钟，即为晶振周期<br>T0Pin，由外部引脚提供脉冲时，单片机的计数器就是计数器<br>C&#x2F;T，给0连连在上面，给1连在下面，图见【7-1】27:44\</p>
 <p><img src="http://m.qpic.cn/psc?/V51cZzWp2rD4ij4eD2DF0J9CJY4AttXx/bqQfVz5yrrGYSXMvKr.cqRfJddRnQk0iyBNhoYXJnRoJmany2OCiEbq.3T9U93F3kALc0BDU*BfVICbY*gXZq45pkGg.dqiFrJbAE8FrRGk!/mnull&bo=jAWAAlAKpgQDB9E!&rf=photolist&t=5" alt="定时器"></p>
 <h2 id="中断系统"><a href="#中断系统" class="headerlink" title="中断系统"></a>中断系统</h2>]]></content>
-  </entry>
-  <entry>
-    <title>网页搜索技巧</title>
-    <url>/2023/01/29/%E7%BD%91%E9%A1%B5%E6%90%9C%E7%B4%A2%E5%BF%AB%E6%8D%B7%E6%96%B9%E6%B3%95/</url>
-    <content><![CDATA[<h1 id="网页搜索快捷方法"><a href="#网页搜索快捷方法" class="headerlink" title="网页搜索快捷方法"></a>网页搜索快捷方法</h1><h2 id="1-精准搜索：双引号"><a href="#1-精准搜索：双引号" class="headerlink" title="1.精准搜索：双引号"></a>1.精准搜索：双引号</h2><p>如果想要搜索固定的字符串，可以在关键词左右加上双引号，免去关键词的分词搜索</p>
-<p>例如：</p>
-<p>高数资料文档 更改为 “高数资料文档”</p>
-<h2 id="2-模糊搜索：-星号"><a href="#2-模糊搜索：-星号" class="headerlink" title="2.模糊搜索： 星号"></a>2.模糊搜索： 星号</h2><p>当你只记得一本书中的句子，但是不记得书的名字的时候，可以在关键词前面加上星号*进行模糊搜索</p>
-<p>例如：</p>
-<p>*本没有路</p>
-<span id="more"></span>
-
-<h2 id="3-剔除搜索-：减号"><a href="#3-剔除搜索-：减号" class="headerlink" title="3.剔除搜索 ：减号"></a>3.剔除搜索 ：减号</h2><p>缩小查询范围，去除无关的搜索可以在关键词后面加减号-</p>
-<p>例如：</p>
-<p>数码产品 -广告</p>
-<h2 id="4-并行搜索：竖杠号"><a href="#4-并行搜索：竖杠号" class="headerlink" title="4.并行搜索：竖杠号"></a>4.并行搜索：竖杠号</h2><p>如果想搜索两个关键词，但两个关键词并不连贯的时候，可以使用竖杠号｜将关键词分开，</p>
-<p>关键词1+空格+竖杠+空格+关键词2</p>
-<p>例如：</p>
-<p>计算机 ｜ 电脑</p>
-<h2 id="5-书本-x2F-影视搜索：书名号"><a href="#5-书本-x2F-影视搜索：书名号" class="headerlink" title="5.书本&#x2F;影视搜索：书名号"></a>5.书本&#x2F;影视搜索：书名号</h2><p>如果想搜索书本影视方面的资料，可以在关键词两侧加入书名号《》</p>
-<p>例如：</p>
-<p>《数码》</p>
-<h2 id="6-搜索指定网站的关键信息：site"><a href="#6-搜索指定网站的关键信息：site" class="headerlink" title="6.搜索指定网站的关键信息：site"></a>6.搜索指定网站的关键信息：site</h2><p>想要直接搜索某个网站内部的关键信息时可以使用 关键词+site+冒号+站点域名</p>
-<p>例如：</p>
-<p>数码 site：baike.baidu.com</p>
-<h2 id="7-标题限定词搜索：intitle"><a href="#7-标题限定词搜索：intitle" class="headerlink" title="7.标题限定词搜索：intitle"></a>7.标题限定词搜索：intitle</h2><p>用intitle+冒号+关键词可以进行搜索限定，注意冒号必须是半角符号</p>
-<h2 id="8-文档搜索：filetype"><a href="#8-文档搜索：filetype" class="headerlink" title="8.文档搜索：filetype"></a>8.文档搜索：filetype</h2><p>搜索某个课程的文档可以用 关键词+filetype+冒号+文档格式</p>
-<p>例如：</p>
-<p>高等数学 filetype：doc</p>
-<p><img src="https://pic.imgdb.cn/item/63d5ea35face21e9efe1e8f3.png" alt="举例"></p>
-<p>本篇技巧来源于b站</p>
-<p><a href="https://www.bilibili.com/video/BV1uT4y1Y7nd/?spm_id_from=333.999.0.0&vd_source=72297e320b9c9f2a8ce440eed8f502e0">9个浏览器搜索小技巧</a></p>
-<p>另外还有自定义搜索引擎的快捷方法可以观看以下视频</p>
-<p><a href="https://www.bilibili.com/video/BV16t4y1C7d1/?spm_id_from=333.999.0.0&vd_source=72297e320b9c9f2a8ce440eed8f502e0">自定义搜索引擎</a></p>
-]]></content>
       <categories>
-        <category>日常技巧</category>
+        <category>学习</category>
       </categories>
       <tags>
-        <tag>Web</tag>
+        <tag>51单片机</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>Hello World</title>
+    <url>/2023/01/17/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<span id="more"></span>
+
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
   </entry>
   <entry>
     <title>My First Blog In My Life</title>
@@ -383,6 +273,124 @@
       </categories>
       <tags>
         <tag>Hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hexo博客搭建路程</title>
+    <url>/2023/01/18/%E5%BB%BA%E7%AB%8B%E5%8D%9A%E5%AE%A2%E8%BF%99%E5%87%A0%E5%A4%A9%E7%9A%84%E4%BD%93%E4%BC%9A/</url>
+    <content><![CDATA[<h1 id="三天搭建HEXO之路"><a href="#三天搭建HEXO之路" class="headerlink" title="三天搭建HEXO之路"></a>三天搭建HEXO之路</h1><h2 id="没有头绪"><a href="#没有头绪" class="headerlink" title="没有头绪"></a>没有头绪</h2><p>第一天,我是在网上刷到别人做笔记的方式,看到别人在计算机课上用手写记笔记,我感觉很搞笑,我平常都是打字出来的(或者不做笔记emmm这样不对),然后看到评论区有大佬说记笔记是要在自己的博客上记,这样对自己的能力又锻炼,且方便高效,对未来面试也有帮助.</p>
+<p>啊哈,看到这个我可兴奋了,这不就是跟建立自己的网站一样吗,我觉得非常的酷,然后就在网上寻找教程,开启了碰壁之路……</p>
+<h3 id="Mac还是Win"><a href="#Mac还是Win" class="headerlink" title="Mac还是Win?"></a>Mac还是Win?</h3><p>我现在有两台电脑,一台是高一时候买的MacBook Pro2019版,一台是高考后暑假拿到的HP战99,经过我一些时间的使用对比,有如下的总结:</p>
+ <span id="more"></span>
+
+<blockquote>
+<p>Mac相对于我的HP本</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>优点</p>
+</blockquote>
+</blockquote>
+<ul>
+<li><p>显示屏素质更加优秀,色彩更准,长时间观看眼睛没那么疼</p>
+</li>
+<li><p>音响好,听音乐的时候更舒适</p>
+</li>
+<li><p>触控板,使用感受极佳,出去自习的时候可以根本不用带鼠标</p>
+</li>
+<li><p>UI设计更加简洁</p>
+</li>
+<li><p>生态好,苹果全家桶,设备之间传输文件或者传输一段网站地址时懒得一个字母一个字母敲都可以直接复制粘贴</p>
+</li>
+</ul>
+<p>这里分享一个网站,方便win电脑和iOS设备进行传输图片以及文件</p>
+<p><a href="https://snapdrop.net/">Snapdrop</a></p>
+<p><img src="https://pic.imgdb.cn/item/63c94402be43e0d30e1ae7be.png" alt="snapdrop使用图片"><br>ps:win里的截屏快捷键:win+shift+s</p>
+<blockquote>
+<blockquote>
+<p>缺点</p>
+</blockquote>
+</blockquote>
+<ul>
+<li><p>一些软件不支持Mac系统,比如我使用到的EasyX以及Keil5,我的单片机无法连接</p>
+</li>
+<li><p>只有四个雷电接口,需要额外加拓展坞</p>
+</li>
+<li><p>网上的许多教程都是基于Win系统进行的,所以找到基于Mac系统的教程很麻烦</p>
+</li>
+</ul>
+<p>以上是我大一第一学期使用下来的综合感受,平常我喜欢使用Mac进行学习,此次搭建博客我一开始也是使用Mac进行。</p>
+<p>但是,两个我都试了一下,最后现在我还是推荐使用win进行hexo博客搭建!</p>
+<h2 id="见招拆招"><a href="#见招拆招" class="headerlink" title="见招拆招"></a>见招拆招</h2><p>在b站上查了许多视频教程,大多的制作比较粗糙,我选了几个我个人觉得比较好的进行推荐:</p>
+<blockquote>
+<p>基于Mac系统(缺点是制作时间比较早)</p>
+</blockquote>
+<p><a href="https://www.bilibili.com/video/BV1Yb411a7ty/?spm_id_from=333.1007.top_right_bar_window_history.content.click">CodeSheep的Hexo博客教程 2019</a></p>
+<blockquote>
+<p>基于win系统的(最新的是2022年进行的)</p>
+</blockquote>
+<p><a href="https://www.bilibili.com/video/BV1qD4y1z783/?spm_id_from=333.337.search-card.all.click&vd_source=72297e320b9c9f2a8ce440eed8f502e0">愛扑bug的熊的Hexo博客教程 2022</a></p>
+<p><a href="https://www.bilibili.com/video/BV1mU4y1j72n/?spm_id_from=333.788.recommend_more_video.1&vd_source=72297e320b9c9f2a8ce440eed8f502e0">火_花喔的Hexo博客教程 2021</a></p>
+<p>过程中会遇到很多问题,需要自己在网上进行查阅解决我的第一个问题就是在输入用户密码之后提醒我:</p>
+<p>Support for password authentication was removed on August 13,2021.Please use a personal access token instead.</p>
+<p>这个就是因为2019年的时候GitHub还没有推出token,所以视频里没有教程解决,只能网上解决,我找到了比较好的解决方法,如下:</p>
+<p><a href="https://blog.csdn.net/qq_38800316/article/details/120679506">token解决</a></p>
+<p>后面的问题很多,就不一一写出来,大部分问题解决方法我都收藏了,放在下面的链接中,希望能对大家有所帮助</p>
+<p><a href="https://i.csdn.net/#/user-center/collection-list?type=1&folder=25633096&key=1">hexo博客搭建中遇到的问题解决方法</a></p>
+<h2 id="前功尽弃"><a href="#前功尽弃" class="headerlink" title="前功尽弃"></a>前功尽弃</h2><p>因为快要过年回家了,我想要带着Windows本回去,所以想着能不能多台设备进行博客内容推送,我找了三个博主写的内容,进行下来不但没有成功,Mac上面也不能进行内容推送更新了,这个时候我的内心是崩溃的,历时两天的辛苦,我都付诸东流了,但是我没有放弃,我把上面写的文件都保存下来,在win上面重新进行搭建,搭建的时候我才发现,很多在Mac上面会出现的问题,在win上面很轻松的就会解决了,这也是为什么我最终还是推荐用win进行博客搭建。</p>
+<h2 id="感受"><a href="#感受" class="headerlink" title="感受"></a>感受</h2><h3 id="学习计算机很需要耐心"><a href="#学习计算机很需要耐心" class="headerlink" title="学习计算机很需要耐心"></a>学习计算机很需要耐心</h3><p>这么说应该不太准确，事实上我们想要做好每一件事都需要很大的耐心，不过在计算机实际操作过程中会遇到很多问题，我们都需要自己一个个进行查找解决方法，不能太过于急躁，也不能轻易说放弃</p>
+<h3 id="实践出真知"><a href="#实践出真知" class="headerlink" title="实践出真知"></a>实践出真知</h3><p>计算机实践是实现成本最低的工科学科了吧，只需要坐在电脑前敲敲键盘就能实现，所以不能懒，觉得自己脑袋懂了就懒得进行实践。在博客上进行内容推送就是一种实践，通过实践我们会对于知识有更加深刻的记忆与认识。</p>
+<p>懒得动手应该是我最大的问题了，高中的时候我就喜欢躺在床上看网课，觉得自己把知识理解就好了，也懒得动手做题，可是这样经常会在考试这种高压环境下使我的知识无法灵活运用，甚至有时候会是使学到的产生偏差，导致考试难以拿到高分。</p>
+<h3 id="英语很重要"><a href="#英语很重要" class="headerlink" title="英语很重要"></a>英语很重要</h3><p>英语能力很重要,高等教育中许多优秀的教材都是国外进行编辑的,都是使用英文,并且计算机语言就是使用英文进行发家的,尽管在本科阶段学习英语不会对我们进行太多的影响,大家对英语的认识就只是四六级,但是如果想要读研、进行深度的学习，英语必须要学习好，不能进行松懈，不可以让高中英语成为我们学习的巅峰。</p>
+<p>下面我分享一本计算机英语教材：</p>
+<p>[计算机英语](链接: <a href="https://pan.baidu.com/s/10viOmJOETZqTT8razUHESg?pwd=sapg">https://pan.baidu.com/s/10viOmJOETZqTT8razUHESg?pwd=sapg</a> 提取码: sapg 复制这段内容后打开百度网盘手机App，操作更方便哦<br>–来自百度网盘超级会员v5的分享)</p>
+]]></content>
+      <categories>
+        <category>生活记录</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>网页搜索技巧</title>
+    <url>/2023/01/29/%E7%BD%91%E9%A1%B5%E6%90%9C%E7%B4%A2%E5%BF%AB%E6%8D%B7%E6%96%B9%E6%B3%95/</url>
+    <content><![CDATA[<h1 id="网页搜索快捷方法"><a href="#网页搜索快捷方法" class="headerlink" title="网页搜索快捷方法"></a>网页搜索快捷方法</h1><h2 id="1-精准搜索：双引号"><a href="#1-精准搜索：双引号" class="headerlink" title="1.精准搜索：双引号"></a>1.精准搜索：双引号</h2><p>如果想要搜索固定的字符串，可以在关键词左右加上双引号，免去关键词的分词搜索</p>
+<p>例如：</p>
+<p>高数资料文档 更改为 “高数资料文档”</p>
+<h2 id="2-模糊搜索：-星号"><a href="#2-模糊搜索：-星号" class="headerlink" title="2.模糊搜索： 星号"></a>2.模糊搜索： 星号</h2><p>当你只记得一本书中的句子，但是不记得书的名字的时候，可以在关键词前面加上星号*进行模糊搜索</p>
+<p>例如：</p>
+<p>*本没有路</p>
+<span id="more"></span>
+
+<h2 id="3-剔除搜索-：减号"><a href="#3-剔除搜索-：减号" class="headerlink" title="3.剔除搜索 ：减号"></a>3.剔除搜索 ：减号</h2><p>缩小查询范围，去除无关的搜索可以在关键词后面加减号-</p>
+<p>例如：</p>
+<p>数码产品 -广告</p>
+<h2 id="4-并行搜索：竖杠号"><a href="#4-并行搜索：竖杠号" class="headerlink" title="4.并行搜索：竖杠号"></a>4.并行搜索：竖杠号</h2><p>如果想搜索两个关键词，但两个关键词并不连贯的时候，可以使用竖杠号｜将关键词分开，</p>
+<p>关键词1+空格+竖杠+空格+关键词2</p>
+<p>例如：</p>
+<p>计算机 ｜ 电脑</p>
+<h2 id="5-书本-x2F-影视搜索：书名号"><a href="#5-书本-x2F-影视搜索：书名号" class="headerlink" title="5.书本&#x2F;影视搜索：书名号"></a>5.书本&#x2F;影视搜索：书名号</h2><p>如果想搜索书本影视方面的资料，可以在关键词两侧加入书名号《》</p>
+<p>例如：</p>
+<p>《数码》</p>
+<h2 id="6-搜索指定网站的关键信息：site"><a href="#6-搜索指定网站的关键信息：site" class="headerlink" title="6.搜索指定网站的关键信息：site"></a>6.搜索指定网站的关键信息：site</h2><p>想要直接搜索某个网站内部的关键信息时可以使用 关键词+site+冒号+站点域名</p>
+<p>例如：</p>
+<p>数码 site：baike.baidu.com</p>
+<h2 id="7-标题限定词搜索：intitle"><a href="#7-标题限定词搜索：intitle" class="headerlink" title="7.标题限定词搜索：intitle"></a>7.标题限定词搜索：intitle</h2><p>用intitle+冒号+关键词可以进行搜索限定，注意冒号必须是半角符号</p>
+<h2 id="8-文档搜索：filetype"><a href="#8-文档搜索：filetype" class="headerlink" title="8.文档搜索：filetype"></a>8.文档搜索：filetype</h2><p>搜索某个课程的文档可以用 关键词+filetype+冒号+文档格式</p>
+<p>例如：</p>
+<p>高等数学 filetype：doc</p>
+<p><img src="https://pic.imgdb.cn/item/63d5ea35face21e9efe1e8f3.png" alt="举例"></p>
+<p>本篇技巧来源于b站</p>
+<p><a href="https://www.bilibili.com/video/BV1uT4y1Y7nd/?spm_id_from=333.999.0.0&vd_source=72297e320b9c9f2a8ce440eed8f502e0">9个浏览器搜索小技巧</a></p>
+<p>另外还有自定义搜索引擎的快捷方法可以观看以下视频</p>
+<p><a href="https://www.bilibili.com/video/BV16t4y1C7d1/?spm_id_from=333.999.0.0&vd_source=72297e320b9c9f2a8ce440eed8f502e0">自定义搜索引擎</a></p>
+]]></content>
+      <categories>
+        <category>日常技巧</category>
+      </categories>
+      <tags>
+        <tag>Web</tag>
       </tags>
   </entry>
 </search>
