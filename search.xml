@@ -8,10 +8,10 @@
 <p>对CPU写1，输出高电平（5v），对CPU写0，输出低电平（0v）</p>
  <span id="more"></span>
 
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#include &lt;REGX52.H&gt; //右键insert</span><br><span class="line"></span><br><span class="line">Void main()&#123;</span><br><span class="line">P2=0xFE; //1111 1110</span><br><span class="line">While(1) //兜圈子</span><br><span class="line">	&#123;</span><br><span class="line"></span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#include &lt;REGX52.H&gt; //右键insert</span><br><span class="line"></span><br><span class="line">void main()&#123;</span><br><span class="line">P2=0xFE; //1111 1110</span><br><span class="line">while(1) //兜圈子</span><br><span class="line">	&#123;</span><br><span class="line"></span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <h2 id="LED闪烁"><a href="#LED闪烁" class="headerlink" title="LED闪烁"></a>LED闪烁</h2><p>单片机中的频率为MHz，速度很快，需要使用延时函数进行操作才可以看亮灭变化<br>软件自带延时计算器<br>指令集STC-Y1<br>频率看晶振上面写的数字</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#include &lt;REGX52.H&gt; //右键insert</span><br><span class="line">#include &lt;INTRINSIC.H&gt;</span><br><span class="line"></span><br><span class="line">Void Delay500ms()&#123;  //生成的延时计算器</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">Void main()&#123;</span><br><span class="line">	while(1)&#123;</span><br><span class="line">	P2=0xFE;</span><br><span class="line">	Delay500ms();</span><br><span class="line">	</span><br><span class="line">	P2=0xFF;</span><br><span class="line">	Delay500ms();</span><br><span class="line">	</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#include &lt;REGX52.H&gt; //右键insert</span><br><span class="line">#include &lt;INTRINSIC.H&gt;</span><br><span class="line"></span><br><span class="line">void Delay500ms()&#123;  //生成的延时计算器</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">void main()&#123;</span><br><span class="line">	while(1)&#123;</span><br><span class="line">	P2=0xFE;</span><br><span class="line">	Delay500ms();</span><br><span class="line">	</span><br><span class="line">	P2=0xFF;</span><br><span class="line">	Delay500ms();</span><br><span class="line">	</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <h2 id="LED流水灯"><a href="#LED流水灯" class="headerlink" title="LED流水灯"></a>LED流水灯</h2><ul>
 <li><p>第一种方法，即使将闪烁的代码进行叠加，比较麻烦</p>
@@ -37,7 +37,7 @@
 <li><p>按位取反(~)<br>~0001 1000 -&gt; 1110 0111</p>
 </li>
 </ul>
-<h2 id="独立按键见控制LED状态"><a href="#独立按键见控制LED状态" class="headerlink" title="独立按键见控制LED状态"></a>独立按键见控制LED状态</h2><p>引入：<br>按键的抖动：对于机械开关，机械触点断开、闭合的时候，由于触点的弹性作用，一个开关在闭合时不会马上稳定的接通，在断开时也不会一下子断开，所以在开关闭合以及断开的瞬间会伴随一连串的抖动。<br>平常开关灯的时候我们的肉眼是看不出来都抖动的影响，但是单片机速度很快，抖动的时候它会检测出来，从而对我们的判断进行误操作，产生按下多下的操作。<br>图片见【3-2】2:00</p>
+<h2 id="独立按键控制LED状态"><a href="#独立按键控制LED状态" class="headerlink" title="独立按键控制LED状态"></a>独立按键控制LED状态</h2><p>引入：<br>按键的抖动：对于机械开关，机械触点断开、闭合的时候，由于触点的弹性作用，一个开关在闭合时不会马上稳定的接通，在断开时也不会一下子断开，所以在开关闭合以及断开的瞬间会伴随一连串的抖动。<br>平常开关灯的时候我们的肉眼是看不出来都抖动的影响，但是单片机速度很快，抖动的时候它会检测出来，从而对我们的判断进行误操作，产生按下多下的操作。<br>图片见【3-2】2:00</p>
 <p><img src="http://m.qpic.cn/psc?/V51cZzWp2rD4ij4eD2DF0J9CJY4AttXx/bqQfVz5yrrGYSXMvKr.cqQId5zGSUyNk6I0qL3ti3XqIeTpfHehUqUlO.UeN.uBlynFKLBsksc8F6zGbPLqeuTpEzNrR0AmAhP7YmpnhGUw!/mnull&bo=QgcgA0IHIAMDByI!&rf=photolist&t=5" alt="抖动"></p>
 <p>解决：<br>通过硬件上的改变<br>或<br>通过软件上的操作来避免抖动的影响，通常使用Delay函数来避开抖动的时间（前摇和后摇的抖动时间大概都为20ms）</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">void main()</span><br><span class="line">&#123;</span><br><span class="line">	while(1)</span><br><span class="line">	&#123;</span><br><span class="line">			if(P3_1==0)//按下按键</span><br><span class="line">		&#123;</span><br><span class="line">			Delay(20); //避免按下时的抖动影响</span><br><span class="line">			while(P3_1==0); //按下的时候还没有松开，这个时候一直循环不操作直到松开</span><br><span class="line">			Delay(20); //松开，避免松开时抖动的影响</span><br><span class="line">			</span><br><span class="line">			P2_0=~P2_0; //对于控制的LED灯操作，亮变灭，灭变亮</span><br><span class="line">			</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -109,26 +109,6 @@
       <tags>
         <tag>51单片机</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>Hello World</title>
-    <url>/2023/01/17/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<span id="more"></span>
-
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
   </entry>
   <entry>
     <title>My First Blog In My Life</title>
@@ -274,6 +254,26 @@
       <tags>
         <tag>Hexo</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>Hello World</title>
+    <url>/2023/01/17/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<span id="more"></span>
+
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
   </entry>
   <entry>
     <title>Hexo博客搭建路程</title>
