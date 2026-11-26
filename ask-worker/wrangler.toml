@@ -1,6 +1,8 @@
 name = "digital-self"
 main = "src/index.js"
 compatibility_date = "2026-11-01"
+workers_dev = true
+preview_urls = false
 
 # Lets `import persona from "../persona.md"` load the file as text
 [[rules]]

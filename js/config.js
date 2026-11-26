@@ -22,7 +22,7 @@ export const CONFIG = {
 
   // The `ask` command. Leave empty until the Cloudflare Worker is deployed.
   // Example: "https://digital-self.your-name.workers.dev"
-  askEndpoint: "",
+  askEndpoint: "https://digital-self.kunxiang.workers.dev",
 
   intro: {
     skipOnRepeat: true,  // returning visitors skip the intro (type `replay` to watch again)
