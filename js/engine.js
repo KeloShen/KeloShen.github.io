@@ -328,6 +328,7 @@ export class Game {
       console.warn(err);
       document.getElementById(id)?.closest(".line")?.remove();
       this.print(this.t("ui.askError"), { cls: "error" });
+      this.print(`(${String(err?.message || err).slice(0, 80)})`, { cls: "dim" });
     } finally {
       clearTimeout(timer);
     }
