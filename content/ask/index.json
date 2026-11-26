@@ -1,6 +1,11 @@
 {
   "docs": [
     {
+      "name": "sap-internship",
+      "description": "SAP internship (HANA Cloud, database version delivery team, Xi'an, 04–10/2025) in depth: what the team does, concrete tasks I delivered (Jenkins/Jira automation, post-upgrade reports, version-distribution POC, FVU calendar UI, chaos-testing evaluation, bug hunts), tools used, the Peer-to-Peer award, and how the internship changed my view of AI coding.",
+      "file": "sap-internship.md"
+    },
+    {
       "name": "thesis",
       "description": "Bachelor thesis / HSBC bank compliance project (LLM-TxInsight) in depth: problem, architecture, staged prompt orchestration, scenario skills, review agent and human arbitration, database, testing, the 500-case model comparison with all numbers, lessons and limitations.",
       "file": "thesis.md"
