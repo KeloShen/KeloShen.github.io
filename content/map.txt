@@ -1,11 +1,11 @@
 # Room map. Each word is a room id (the same ids as the "# roomId:" headings in profile.*.md).
 #   -   connects rooms left/right (east/west)
 #   |   connects rooms vertically (north/south)
-#   :   connects rooms as stairs (up/down)
+#   :   (optional) connects rooms as stairs (up/down); we use compass directions only
 # Visitors start in the room named in profile.en.md front matter (start:), or the first room listed there.
 
           library
              |
 playroom - foyer - workshop - office
-             :
+             |
           archive

@@ -98,7 +98,7 @@
     "help": [
       "COMMANDS",
       "look              describe the room you're in",
-      "go <direction>    move: north, south, east, west, up, down (or just n/s/e/w/u/d)",
+      "go <direction>    move: north, south, east, west (or just n/s/e/w)",
       "examine <thing>   look closely at something (shortcut: x)",
       "map               show where you are",
       "ask <question>    talk to my digital self, e.g.  ask what are you best at?",

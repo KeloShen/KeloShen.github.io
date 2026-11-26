@@ -85,7 +85,7 @@
     "help": [
       "BEFEHLE (Deutsch oder Englisch)",
       "schau / look             den Raum beschreiben",
-      "geh <Richtung> / go      norden, süden, osten, westen, hoch, runter",
+      "geh <Richtung> / go      norden, süden, osten, westen",
       "untersuche <Ding> / x    etwas genauer ansehen",
       "karte / map              zeigt, wo du bist",
       "frag <Frage> / ask       mit meinem digitalen Ich sprechen, z. B. frag was kannst du am besten?",
