@@ -1,0 +1,14 @@
+{
+  "docs": [
+    {
+      "name": "thesis",
+      "description": "Bachelor thesis / HSBC bank compliance project (LLM-TxInsight) in depth: problem, architecture, staged prompt orchestration, scenario skills, review agent and human arbitration, database, testing, the 500-case model comparison with all numbers, lessons and limitations.",
+      "file": "thesis.md"
+    },
+    {
+      "name": "this-website",
+      "description": "How this portfolio website was designed and built: the Three.js sand intro, the text-adventure engine, the content system, three languages, the public AI chat log repo with automatic privacy check and AI summary, and this \"ask\" digital self with on-demand document loading. Also how I worked with AI to build it.",
+      "file": "this-website.md"
+    }
+  ]
+}

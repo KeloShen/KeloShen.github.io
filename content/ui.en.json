@@ -132,6 +132,7 @@
     "langSwitched": "Language set to English.",
     "askUsage": "Ask me anything, e.g.  {ask} what projects are you proudest of?",
     "askOffline": "The mirror is quiet for now — the ask feature isn't switched on yet. Try contact instead.",
+    "askRead": "(looked through: {docs})",
     "askThinking": "Thinking",
     "askLimited": "Too many questions in a short time. Take a breath and try again in a minute.",
     "askError": "The connection to my digital self flickered. Please try again.",

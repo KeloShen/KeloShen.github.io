@@ -308,7 +308,7 @@ export class Game {
     const id = `think-${Date.now()}`;
     this.print(`<span id="${id}" class="thinking">${esc(this.t("ui.askThinking"))}</span>`, { html: true, cls: "dim" });
     const ctrl = new AbortController();
-    const timer = setTimeout(() => ctrl.abort(), 30000);
+    const timer = setTimeout(() => ctrl.abort(), 60000);
     try {
       const res = await fetch(this.config.askEndpoint, {
         method: "POST",
@@ -323,6 +323,7 @@ export class Game {
       this.askLog.push({ role: "user", content: q }, { role: "assistant", content: data.answer });
       this.print(`◈ ${this.config.name}:`, { cls: "accent" });
       this.print(data.answer, { type: true, cls: "answer" });
+      if (Array.isArray(data.read) && data.read.length) this.print(this.t("ui.askRead", { docs: data.read.join(", ") }), { cls: "dim" });
     } catch (err) {
       console.warn(err);
       document.getElementById(id)?.closest(".line")?.remove();

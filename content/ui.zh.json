@@ -118,6 +118,7 @@
     "langSwitched": "已切换为中文。",
     "askUsage": "随便问，例如：{ask} 你最自豪的项目是什么？",
     "askOffline": "镜子暂时沉默——提问功能还没有开启。可以先输入「联系」找到我。",
+    "askRead": "（翻阅了：{docs}）",
     "askThinking": "思考中",
     "askLimited": "问得太快啦，休息一下，一分钟后再试。",
     "askError": "与数字分身的连接闪了一下，请再试一次。",

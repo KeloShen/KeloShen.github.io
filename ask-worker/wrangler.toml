@@ -1,0 +1,18 @@
+name = "digital-self"
+main = "src/index.js"
+compatibility_date = "2026-11-01"
+
+# Lets `import persona from "../persona.md"` load the file as text
+[[rules]]
+type = "Text"
+globs = ["**/*.md"]
+fallthrough = true
+
+[vars]
+MODEL = "deepseek-flash"
+OPENAI_BASE_URL = "https://api.deepseek.com"
+SITE_URL = "https://keloshen.github.io"
+ALLOWED_ORIGINS = "https://keloshen.github.io,http://localhost:8000"
+
+# The API key is a secret: never put it in this file. Run:
+#   npx wrangler secret put API_KEY

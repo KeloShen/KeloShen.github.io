@@ -119,6 +119,7 @@
     "langSwitched": "Sprache auf Deutsch umgestellt.",
     "askUsage": "Frag mich alles, z. B.  {ask} auf welches Projekt bist du am stolzesten?",
     "askOffline": "Der Spiegel schweigt noch, die Fragefunktion ist noch nicht aktiv. Versuch es mit kontakt.",
+    "askRead": "(nachgeschlagen: {docs})",
     "askThinking": "Denke nach",
     "askLimited": "Zu viele Fragen auf einmal. Bitte versuch es in einer Minute wieder.",
     "askError": "Die Verbindung zu meinem digitalen Ich hat geflackert. Bitte erneut versuchen.",

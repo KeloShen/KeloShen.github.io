@@ -107,3 +107,8 @@ playroom - foyer - workshop
 ## 给 AI 的提示
 
 修改内容时只需要编辑这个文件夹里的文件。请保持标题格式 `# id: 名称 | 栏目` 和 `## id: 名称 | 别名`，三种语言的房间 id 和物品 id 保持一致。改完英文版后，请同步更新 `profile.zh.md` 和 `profile.de.md` 里对应的段落。
+
+## ask/ (knowledge for the `ask` digital self)
+One Markdown file per topic, each starting with `name:` and `description:` front matter (copy `ask/_TEMPLATE.md`).
+The digital self always sees the one-line descriptions and opens a file only when a question needs it.
+`ask/index.json` is rebuilt automatically by a GitHub Action after you push. Everything here is public.
