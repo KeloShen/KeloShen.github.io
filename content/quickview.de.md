@@ -5,7 +5,7 @@
 -->
 
 # Kunxiang Shen
-Data-Science-Masterstudent an der Freien Universität Berlin · Softwareentwickler für LLM-Agentensysteme, Full-Stack-Anwendungen und die CI/CD dahinter.
+Data-Science-Masterstudent an der Freien Universität Berlin.
 Offen für Praktika und Werkstudentenstellen in AI Engineering, Data und Full-Stack-Entwicklung.
 
 ## Ausbildung

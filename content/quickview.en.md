@@ -5,7 +5,7 @@
 -->
 
 # Kunxiang Shen
-MSc Data Science student at Freie Universität Berlin · software engineer building LLM agent systems, full-stack apps and the CI/CD behind them.
+MSc Data Science student at Freie Universität Berlin.
 Open to internships and working-student roles in AI engineering, data and full-stack development.
 
 ## Education
