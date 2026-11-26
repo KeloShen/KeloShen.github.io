@@ -1,0 +1,156 @@
+{
+  "commands": {
+    "help": [
+      "help",
+      "h",
+      "?"
+    ],
+    "look": [
+      "look",
+      "l"
+    ],
+    "go": [
+      "go",
+      "walk",
+      "move"
+    ],
+    "examine": [
+      "examine",
+      "x",
+      "inspect",
+      "read",
+      "check"
+    ],
+    "map": [
+      "map",
+      "m"
+    ],
+    "quick": [
+      "quick",
+      "overview"
+    ],
+    "resume": [
+      "resume",
+      "cv"
+    ],
+    "contact": [
+      "contact",
+      "email"
+    ],
+    "lang": [
+      "lang",
+      "language"
+    ],
+    "ask": [
+      "ask"
+    ],
+    "clear": [
+      "clear",
+      "cls"
+    ],
+    "replay": [
+      "replay"
+    ]
+  },
+  "directions": {
+    "north": [
+      "north",
+      "n"
+    ],
+    "south": [
+      "south",
+      "s"
+    ],
+    "east": [
+      "east",
+      "e"
+    ],
+    "west": [
+      "west",
+      "w"
+    ],
+    "up": [
+      "up",
+      "u"
+    ],
+    "down": [
+      "down",
+      "d"
+    ]
+  },
+  "ui": {
+    "pageTitle": "Digital Life",
+    "placeholder": "Type a command… (try: help)",
+    "skip": "Skip ›",
+    "quickView": "Quick view",
+    "quickIntro": "The plain version — everything on one page.",
+    "downloadResume": "Download résumé (PDF)",
+    "close": "Close",
+    "introHello": "Hello, I'm",
+    "introSub": "Meet my digital twin.",
+    "introEntering": "Entering…",
+    "welcome": [
+      "DIGITAL LIFE of {name} — online.",
+      "You are a visitor inside my memory palace.",
+      "Type commands, or tap the buttons below.",
+      "New here? Type  help.  In a hurry? Type  quick."
+    ],
+    "help": [
+      "COMMANDS",
+      "look              describe the room you're in",
+      "go <direction>    move: north, south, east, west, up, down (or just n/s/e/w/u/d)",
+      "examine <thing>   look closely at something (shortcut: x)",
+      "map               show where you are",
+      "ask <question>    talk to my digital self, e.g.  ask what are you best at?",
+      "quick             everything on one plain page",
+      "resume            open my résumé (PDF)",
+      "contact           how to reach me",
+      "lang <en|zh|de>   switch language",
+      "clear · replay    clear screen · replay the intro",
+      "TIPS  Tab autocompletes · ↑/↓ browse history · click anywhere to skip typing"
+    ],
+    "youSee": "You see:",
+    "exits": "Exits:",
+    "dirs": {
+      "north": "north",
+      "south": "south",
+      "east": "east",
+      "west": "west",
+      "up": "up",
+      "down": "down"
+    },
+    "cantGo": "You can't go that way.",
+    "goWhere": "Go where? Try a direction like north or n.",
+    "noItem": "There's no \"{item}\" here.",
+    "unknown": "I don't understand \"{input}\". Type help for commands.",
+    "unknownAsk": "Want to ask my digital self instead? Try: {ask} <your question>",
+    "error": "Something glitched. Try again?",
+    "mapLegend": "The blinking figure is you.",
+    "resume": "Opening résumé:",
+    "contact": "Contact",
+    "langList": "Available languages: {list}. Usage: lang zh",
+    "langSwitched": "Language set to English.",
+    "askUsage": "Ask me anything, e.g.  {ask} what projects are you proudest of?",
+    "askOffline": "The mirror is quiet for now — the ask feature isn't switched on yet. Try contact instead.",
+    "askThinking": "Thinking",
+    "askLimited": "Too many questions in a short time. Take a breath and try again in a minute.",
+    "askError": "The connection to my digital self flickered. Please try again.",
+    "egg": {
+      "xyzzy": "A hollow voice says: \"Fool.\"  …just kidding. Nice to meet a fellow adventurer.",
+      "sudo": "[sudo] permission granted. Offer letter accepted in advance. Now type contact. :)"
+    },
+    "ai": {
+      "teaser": "The servers hum. {n} conversations archived across {topics} topics. Try: examine terminal",
+      "statsTitle": "AI USAGE · OVERVIEW",
+      "meta": "{n} curated conversations · last updated {updated}",
+      "tools": "Tools",
+      "topics": "Top topics",
+      "learnedTitle": "WHAT I LEARNED (AI-generated summary)",
+      "recentTitle": "RECENT CONVERSATIONS",
+      "openRepo": "Browse the full archive on GitHub",
+      "soon": "The archive is still being curated: the first hand-picked conversations and an AI-written summary of what I learned will appear here soon.",
+      "soonTeaser": "The servers hum quietly. The archive is being curated right now. Try: examine terminal"
+    },
+    "resumeNone": "My résumé isn't posted publicly. Type {contact} and I'll gladly send it."
+  }
+}

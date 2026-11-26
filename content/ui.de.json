@@ -1,0 +1,143 @@
+{
+  "commands": {
+    "help": [
+      "hilfe"
+    ],
+    "look": [
+      "schau",
+      "umsehen"
+    ],
+    "go": [
+      "geh",
+      "gehe"
+    ],
+    "examine": [
+      "untersuche",
+      "lies"
+    ],
+    "map": [
+      "karte"
+    ],
+    "quick": [
+      "überblick"
+    ],
+    "resume": [
+      "lebenslauf"
+    ],
+    "contact": [
+      "kontakt"
+    ],
+    "lang": [
+      "sprache"
+    ],
+    "ask": [
+      "frag",
+      "frage"
+    ],
+    "clear": [
+      "leeren"
+    ],
+    "replay": [
+      "wiederholen"
+    ]
+  },
+  "directions": {
+    "north": [
+      "norden"
+    ],
+    "south": [
+      "süden",
+      "sueden"
+    ],
+    "east": [
+      "osten",
+      "o"
+    ],
+    "west": [
+      "westen"
+    ],
+    "up": [
+      "hoch",
+      "rauf"
+    ],
+    "down": [
+      "runter",
+      "hinab"
+    ]
+  },
+  "ui": {
+    "pageTitle": "Digitales Leben",
+    "placeholder": "Befehl eingeben… (z. B. hilfe)",
+    "skip": "Überspringen ›",
+    "quickView": "Überblick",
+    "quickIntro": "Die schlichte Version: alles auf einer Seite.",
+    "downloadResume": "Lebenslauf herunterladen (PDF)",
+    "close": "Schließen",
+    "introHello": "Hallo, ich bin",
+    "introSub": "Triff meinen digitalen Zwilling.",
+    "introEntering": "Eintreten…",
+    "welcome": [
+      "DIGITALES LEBEN von {name}: online.",
+      "Du bist Gast in meinem Gedächtnispalast.",
+      "Tippe Befehle oder nutze die Buttons unten.",
+      "Neu hier? Tippe  hilfe.  Eilig? Tippe  überblick."
+    ],
+    "help": [
+      "BEFEHLE (Deutsch oder Englisch)",
+      "schau / look             den Raum beschreiben",
+      "geh <Richtung> / go      norden, süden, osten, westen, hoch, runter",
+      "untersuche <Ding> / x    etwas genauer ansehen",
+      "karte / map              zeigt, wo du bist",
+      "frag <Frage> / ask       mit meinem digitalen Ich sprechen, z. B. frag was kannst du am besten?",
+      "überblick / quick        alles auf einer Seite",
+      "lebenslauf / resume      Lebenslauf öffnen (PDF)",
+      "kontakt / contact        so erreichst du mich",
+      "sprache <en|zh|de>       Sprache wechseln",
+      "leeren · wiederholen     Bildschirm leeren · Intro erneut abspielen",
+      "TIPPS  Tab vervollständigt · ↑/↓ Verlauf · Klick überspringt die Schreibanimation"
+    ],
+    "youSee": "Du siehst:",
+    "exits": "Ausgänge:",
+    "dirs": {
+      "north": "Norden",
+      "south": "Süden",
+      "east": "Osten",
+      "west": "Westen",
+      "up": "hoch",
+      "down": "runter"
+    },
+    "cantGo": "Dort geht es nicht weiter.",
+    "goWhere": "Wohin? Versuch eine Richtung, z. B. norden.",
+    "noItem": "Hier gibt es kein „{item}“.",
+    "unknown": "„{input}“ verstehe ich nicht. Tippe hilfe für alle Befehle.",
+    "unknownAsk": "Lieber mein digitales Ich fragen? Versuch: {ask} <deine Frage>",
+    "error": "Kleiner Glitch. Noch einmal versuchen?",
+    "mapLegend": "Die blinkende Figur bist du.",
+    "resume": "Lebenslauf wird geöffnet:",
+    "contact": "Kontakt",
+    "langList": "Verfügbare Sprachen: {list}. Beispiel: sprache en",
+    "langSwitched": "Sprache auf Deutsch umgestellt.",
+    "askUsage": "Frag mich alles, z. B.  {ask} auf welches Projekt bist du am stolzesten?",
+    "askOffline": "Der Spiegel schweigt noch, die Fragefunktion ist noch nicht aktiv. Versuch es mit kontakt.",
+    "askThinking": "Denke nach",
+    "askLimited": "Zu viele Fragen auf einmal. Bitte versuch es in einer Minute wieder.",
+    "askError": "Die Verbindung zu meinem digitalen Ich hat geflackert. Bitte erneut versuchen.",
+    "egg": {
+      "xyzzy": "Eine hohle Stimme sagt: „Narr.“ …Spaß beiseite: schön, eine Abenteurerin oder einen Abenteurer zu treffen.",
+      "sudo": "[sudo] Zugriff gewährt. Angebot vorab angenommen. Jetzt tippe kontakt. :)"
+    },
+    "ai": {
+      "teaser": "Die Server summen. {n} Gespräche zu {topics} Themen archiviert. Versuch: untersuche terminal",
+      "statsTitle": "KI-NUTZUNG · ÜBERSICHT",
+      "meta": "{n} ausgewählte Gespräche · zuletzt aktualisiert {updated}",
+      "tools": "Werkzeuge",
+      "topics": "Top-Themen",
+      "learnedTitle": "WAS ICH GELERNT HABE (KI-generierte Zusammenfassung)",
+      "recentTitle": "LETZTE GESPRÄCHE",
+      "openRepo": "Ganzes Archiv auf GitHub ansehen",
+      "soon": "Das Archiv wird gerade kuratiert: ausgewählte KI-Gespräche und eine KI-geschriebene Zusammenfassung meiner Erkenntnisse erscheinen hier bald.",
+      "soonTeaser": "Die Server summen leise. Das Archiv wird gerade kuratiert. Versuch: untersuche terminal"
+    },
+    "resumeNone": "Mein Lebenslauf ist nicht öffentlich. Tippe {contact}, dann schicke ich ihn gern."
+  }
+}

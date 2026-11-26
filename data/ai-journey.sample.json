@@ -1,0 +1,26 @@
+{
+  "updated": "2026-11-26",
+  "totalChats": 12,
+  "headline": {
+    "en": "SAMPLE DATA. Over the past year I mostly used AI as a sparring partner: to understand concepts deeply, debug faster, and get critical feedback on my writing.",
+    "zh": "示例数据。过去一年里，我主要把 AI 当作陪练：深入理解概念、更快地调试代码，以及让它批判性地审阅我的文字。",
+    "de": "BEISPIELDATEN. Im letzten Jahr habe ich KI vor allem als Sparringspartner genutzt: um Konzepte tief zu verstehen, schneller zu debuggen und kritisches Feedback zu meinen Texten zu bekommen."
+  },
+  "tools": { "Claude": 7, "ChatGPT": 3, "DeepSeek": 2 },
+  "topics": [
+    { "name": { "en": "Programming & debugging", "zh": "编程与调试", "de": "Programmieren & Debugging" }, "count": 5 },
+    { "name": { "en": "Machine learning", "zh": "机器学习", "de": "Maschinelles Lernen" }, "count": 3 },
+    { "name": { "en": "Writing & presentation", "zh": "写作与表达", "de": "Schreiben & Präsentieren" }, "count": 2 },
+    { "name": { "en": "Career planning", "zh": "职业规划", "de": "Karriereplanung" }, "count": 2 }
+  ],
+  "learned": [
+    { "en": "Breaking a vague problem into small, testable questions gets far better answers.", "zh": "把模糊的问题拆成小而可验证的问题，得到的答案好得多。", "de": "Ein vages Problem in kleine, prüfbare Fragen zu zerlegen, liefert deutlich bessere Antworten." },
+    { "en": "Always verify: in 2 of my chats the AI was confidently wrong, and checking the docs caught it.", "zh": "永远要验证：有 2 次对话里 AI 很自信地答错了，是查文档发现的。", "de": "Immer überprüfen: In 2 Gesprächen lag die KI selbstsicher falsch, ein Blick in die Doku hat es aufgedeckt." },
+    { "en": "Understood gradient descent and backpropagation well enough to implement them from scratch.", "zh": "对梯度下降和反向传播理解到可以从零实现的程度。", "de": "Gradientenabstieg und Backpropagation so gut verstanden, dass ich sie selbst implementieren konnte." }
+  ],
+  "recent": [
+    { "date": "2026-11-10", "tool": "Claude", "title": { "en": "Debugging a race condition in async Python", "zh": "调试 Python 异步代码中的竞态条件", "de": "Race Condition in asynchronem Python debuggen" }, "path": "chats/2026-11-async-race.md" },
+    { "date": "2026-10-02", "tool": "ChatGPT", "title": { "en": "Explaining backpropagation step by step", "zh": "一步步理解反向传播", "de": "Backpropagation Schritt für Schritt" }, "path": "chats/2026-10-backprop.md" },
+    { "date": "2026-09-15", "tool": "DeepSeek", "title": { "en": "Feedback on my thesis abstract", "zh": "请 AI 审阅我的论文摘要", "de": "Feedback zu meinem Thesis-Abstract" }, "path": "chats/2026-09-abstract.md" }
+  ]
+}
