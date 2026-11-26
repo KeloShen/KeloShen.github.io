@@ -14,8 +14,9 @@ export const CONFIG = {
     repo: "ai-journey",
     branch: "main",
     file: "summary.json",
-    // Optional: a full URL that overrides repo/branch/file
-    url: "",
+    // Tried first: same domain as the site (works wherever the site works, incl. mainland China).
+    // Needs GitHub Pages switched on in the ai-journey repo.
+    url: "https://keloshen.github.io/ai-journey/summary.json",
     fallback: "data/ai-journey.sample.json",
   },
 

@@ -340,7 +340,7 @@ export class Game {
     const a = this.config.aiJourney;
     const list = [];
     if (a.url) list.push(a.url);
-    else if (this.config.github && !this.config.github.startsWith("your-")) {
+    if (this.config.github && !this.config.github.startsWith("your-")) {
       list.push(`https://raw.githubusercontent.com/${this.config.github}/${a.repo}/${a.branch}/${a.file}`);
     }
     list.push(a.fallback);
@@ -355,7 +355,8 @@ export class Game {
         if (res.ok) {
           this.aiData = await res.json();
           this.aiData._src = url;
-          this.aiData.sample = url === this.config.aiJourney.fallback;   // placeholder data: don't show fake numbers
+          // placeholder data or no published chats yet: show "being curated" instead of numbers
+          this.aiData.sample = url === this.config.aiJourney.fallback || !(this.aiData.totalChats > 0);
           return this.aiData;
         }
       } catch { /* try next */ }
