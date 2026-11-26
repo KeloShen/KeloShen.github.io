@@ -39,7 +39,6 @@ function paintUI() {
   $("intro-name").textContent = CONFIG.name;
   document.title = `${CONFIG.name} · ${i18n.t("ui.pageTitle")}`;
   $("brand-name").textContent = CONFIG.name;
-  $("brand-tag").textContent = CONFIG.tagline;
   $("cmd").placeholder = i18n.t("ui.placeholder");
   $("skip").textContent = i18n.t("ui.skip");
   $("intro-hello").textContent = i18n.t("ui.introHello");
