@@ -12,8 +12,10 @@ Open to internships and working-student roles in AI engineering, data and full-s
 ### Freie Universität Berlin · MSc Data Science | 09/2026 – present
 ### Xidian University · BEng Software Engineering | 08/2022 – 06/2026
 - GPA 3.8 / 4.0 (top 15%) · Cloud Computing & Big Data track
+- Qualified for recommended postgraduate admission (exam-exempt); voluntarily declined
 - Thesis: LLM-based bank transaction rationality analysis system, with HSBC Technology
 ### Universität Paderborn · Exchange semester | 09/2024 – 03/2025
+- Funded by Xidian's Office of International Cooperation and Exchange
 ### University of Cambridge · AI & Deep Learning programme | 02/2024
 - Final grade A; best mark (94%) in the student-led paper reading group
 

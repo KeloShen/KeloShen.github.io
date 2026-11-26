@@ -40,9 +40,9 @@ Try:  ask what did you build at SAP?
 <!-- game-only -->
 
 # library: The Library | Education
-> Shelves rise into darkness, lined with books that hum faintly. A framed diploma hangs above a reading desk; beside it lie a Cambridge certificate, a train ticket to Paderborn and a brand-new notebook with a Berlin bear on the cover.
+> Shelves rise into darkness, lined with books that hum faintly. A framed diploma hangs above a reading desk, where a thick bound thesis lies open. Beside it: a Cambridge certificate, a train ticket to Paderborn and a brand-new notebook with a Berlin bear on the cover. The tall bookshelf has three shelves: software, systems, and data & math.
 
-Currently an MSc Data Science student at Freie Universität Berlin (since 09/2026). Before that: BEng in Software Engineering at Xidian University (2022–2026, GPA 3.8/4.0, top 15%), an exchange semester at Universität Paderborn, and the University of Cambridge "AI and Deep Learning" programme (final grade A).
+Currently an MSc Data Science student at Freie Universität Berlin (since 09/2026). Before that: BEng in Software Engineering at Xidian University (2022–2026, GPA 3.8/4.0, top 15%; qualified for recommended postgraduate admission and voluntarily declined it), an exchange semester at Universität Paderborn funded by Xidian's Office of International Cooperation and Exchange, and the University of Cambridge winter programme "Artificial Intelligence and Deep Learning" (final grade A).
 
 ## berlin: a Berlin notebook | berlin, notebook, fu, master, msc
 FREIE UNIVERSITÄT BERLIN · MSc Data Science
@@ -54,33 +54,86 @@ XIDIAN UNIVERSITY · BEng Software Engineering
 08/2022 – 06/2026 · Xi'an, China
 Track: Cloud Computing & Big Data
 GPA 3.8 / 4.0 (top 15% of the major) · weighted average 86.7
+Qualified for recommended admission to a master's programme without the national entrance exam (保研), and voluntarily declined it.
 Scholarships: University Second Class Scholarship (2023–2024), Third Class Scholarship (2022–2023)
 
-## thesis: a bound thesis | thesis, dissertation
-Bachelor thesis: "Design and Implementation of a Customized LLM-based Bank Customer Transaction Rationality Analysis System", in collaboration with HSBC Technology.
-The full story is on the workbench in the Workshop: examine agent.
+The courses are on the shelves (examine bookshelf); the thesis lies open on the desk (examine thesis).
 
-## cambridge: a Cambridge certificate | cambridge, certificate, deep learning
+## thesis: a bound thesis | thesis, dissertation, bachelor thesis, llm-txinsight
+BACHELOR THESIS · "Design and Implementation of a Customized LLM-based Bank Customer Transaction Rationality Analysis System"
+System name: LLM-TxInsight · in collaboration with HSBC Technology · 12/2025 – 04/2026
+
+THE PROBLEM
+Compliance analysts check customer profiles and transaction histories by hand. The process is slow, judgement standards differ between reviewers, and ambiguous transactions rarely end in a clear, explainable conclusion.
+
+WHAT I BUILT
+A browser-based system (Spring Boot 3 + LangChain4j, Vue 3, PostgreSQL). Upload a customer profile and a transaction file (Excel/CSV); it returns a three-part report (customer overview, transaction summary, rationality statement) that can be exported to Word.
+  · Staged analysis instead of one big prompt. Stage 1 screens for clearly unreasonable patterns (large anomalies, money in and straight out, funds pooled from many people). Stage 2 judges reasonableness against the customer's job and income. Stage 3 asks the analyst targeted follow-up questions (up to 3 rounds) when the evidence isn't enough.
+  · Scenario skills: rules for cases such as transfers between relatives, structured deposits and high-risk countries are loaded only when a case needs them; the high-risk country list comes from the database, not from the prompt.
+  · A review agent double-checks each conclusion; if it disagrees with the analysis agent, the case goes to human arbitration and the ruling is recorded.
+  · Analyst feedback is distilled into reusable lessons that later analyses draw on.
+  · 171 backend test methods (JUnit 5, Mockito, unit and integration) plus frontend component tests (Vitest).
+
+EVALUATION · 500 labelled cases (about 200 reasonable, 200 unreasonable, 100 needing a human)
+  · Qwen-plus: plain prompt 50.0% → few-shot + chain-of-thought 60.4% → staged orchestration 68.0%
+  · Best result: Qwen3.6-max-preview with skills, 86.7%. Qwen3-max with skills reached 83.1%, above the project's 80% target.
+  · Loading skills on demand cut token usage by about 20–30% across models.
+  · The cheapest model (DeepSeek V4 Flash, about ¥0.03 per case) reached only 57.6%: model choice is a real accuracy-versus-cost trade-off.
+
+MAIN FINDINGS
+Splitting the task into focused stages helped accuracy more than prompt tricks did; context size is a cost lever you can engineer; and a system that knows when to ask a human is easier to trust than one that always answers.
+
+## cambridge: a Cambridge certificate | cambridge, certificate, deep learning, winter programme
 UNIVERSITY OF CAMBRIDGE · Department of Computer Science and Technology
-"Artificial Intelligence and Deep Learning" programme, 12–24 Feb 2024
-Led by Prof. Nicholas D. Lane. Lectures, discussions and a group presentation.
-Final grade: A. Best mark (94%) in the student-led reading group, where we presented and critiqued landmark deep learning papers.
+Winter programme "Artificial Intelligence and Deep Learning", 12–24 February 2024
+Taught by Prof. Nicholas D. Lane (Professor of Machine Learning Systems, co-founder of Flower Labs). Lectures, discussions and a group presentation:
+  1. Why deep learning became so dominant, and the forces that will shape where it goes next
+  2. Core building blocks: convolutional and recurrent networks, with vision and language examples in code
+  3. Modern building blocks: residual connections, depthwise-separable convolutions, channel shuffle and attention
+  4. The craft of training: deriving how parameters are learned from statistics, then a step-by-step recipe for training a deep model
+  5. Compute: why deep learning is so expensive, and how both systems and algorithms reduce that cost
+  6. The research frontier: taking apart the most influential recent papers and learning to judge them critically
+  7. A student-led reading group, where we summarised and critiqued landmark papers ourselves
+Final grade: A.
 
 ## ticket: a train ticket to Paderborn | ticket, paderborn, exchange
 UNIVERSITÄT PADERBORN · Exchange student, 09/2024 – 03/2025
-Computer Networks, Fundamental Algorithms and my first German course, supported by Xidian University's international cooperation grant.
+Funded by Xidian University's Office of International Cooperation and Exchange (国合部).
+Courses: Computer Networks, Fundamental Algorithms, and German (A1).
 My first semester in Germany.
 
 ## bookshelf: a bookshelf | bookshelf, books, courses, shelf
-Spines labelled with the courses that shaped me (grades out of 100):
-  · Numerical Analysis ............ 99
-  · Probability & Statistics ...... 96
-  · Intro to Computing & Programming 96
-  · Information Security .......... 93
-  · Cloud Computing Technology .... 92
-  · Machine Learning & Data Mining  88
-  · Operating Systems ............. 88 (course project: 95)
-  · Data Structures ............... 86
+A tall bookshelf with three shelves of the major courses that shaped me:
+  · the software shelf ··········· programming, data structures, algorithms, architecture
+  · the systems shelf ············ circuits, computer architecture, operating systems, cloud, security
+  · the data & math shelf ········ statistics, numerical methods, machine learning, retrieval
+Try:  examine software shelf
+
+## shelf-software: the software shelf | software shelf, software, programming shelf
+  · Introduction to Computing & Programming: my first real programming: control flow, functions, arrays, pointers and memory
+  · Python Programming: writing idiomatic Python and using its standard library
+  · Object-Oriented Programming: classes, inheritance and polymorphism; organising code around objects
+  · Data Structures: lists, stacks, queues, trees, graphs and hash tables, plus sorting and searching
+  · Algorithm Design & Analysis: divide and conquer, dynamic programming, greedy algorithms, backtracking, complexity analysis
+  · Software Architecture: architectural styles, quality attributes and design patterns, and how to choose between them
+  · Software Process & Project Management: from waterfall to agile, estimating, planning, managing risk and versions
+  · Intellectual Property & Software Protection: copyright, patents and open-source licences for software
+
+## shelf-systems: the systems shelf | systems shelf, systems, hardware
+  · Circuits & Electronics, Digital Circuit & System Design: from logic gates to combinational and sequential circuits
+  · Computer Organization & Architecture: instruction sets, the datapath, memory hierarchy and caches, with a course project
+  · Operating Systems: processes and threads, scheduling, synchronisation, memory management and file systems, with a course project
+  · Cloud Computing: virtualisation, containers and distributed storage and computing
+  · Cloud & Big Data Engineering Practicum: a hands-on team engineering project in my specialisation track
+  · Introduction to Information Security: cryptography basics, authentication, access control, common attacks and defences
+
+## shelf-data: the data & math shelf | data shelf, math shelf, data, math, ai
+  · Discrete Mathematics: logic, sets, relations, graphs and combinatorics
+  · Probability & Statistics: distributions, estimation and hypothesis testing
+  · Numerical Analysis: floating-point error, interpolation, numerical integration and iterative methods for solving equations
+  · Machine Learning & Data Mining: regression, classification, clustering, model evaluation and association rules
+  · Information Retrieval: inverted indexes, TF-IDF and vector-space ranking, precision and recall; the ideas behind today's RAG
+  · Algorithms for Bioinformatics: sequence alignment with dynamic programming
 
 # workshop: The Workshop | Projects & skills
 > Sparks and soldering smoke. On the workbench, a screen streams an AI agent's reasoning about a bank transaction; next to it, a terminal that looks suspiciously like this one. A well-worn toolbox sits open on the floor.

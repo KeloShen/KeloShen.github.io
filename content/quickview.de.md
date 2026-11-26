@@ -12,8 +12,10 @@ Offen für Praktika und Werkstudentenstellen in AI Engineering, Data und Full-St
 ### Freie Universität Berlin · M.Sc. Data Science | 09/2026 – heute
 ### Xidian University · B.Eng. Software Engineering | 08/2022 – 06/2026
 - GPA 3,8 / 4,0 (Top 15 %) · Schwerpunkt Cloud Computing & Big Data
+- Qualifiziert für die prüfungsfreie Master-Zulassung (保研); freiwillig verzichtet
 - Abschlussarbeit: LLM-basiertes System zur Plausibilitätsprüfung von Banktransaktionen, mit HSBC Technology
 ### Universität Paderborn · Austauschsemester | 09/2024 – 03/2025
+- Gefördert vom International Office der Xidian University
 ### University of Cambridge · Programm AI & Deep Learning | 02/2024
 - Endnote A; beste Teilnote (94 %) in der studentisch geleiteten Paper-Lesegruppe
 

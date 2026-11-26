@@ -33,9 +33,9 @@ Versuch:  frag was hast du bei SAP gemacht?
 <!-- game-only -->
 
 # library: Die Bibliothek | Ausbildung
-> Regale ragen in die Dunkelheit, die Bücher summen leise. Über einem Lesetisch hängt ein gerahmtes Diplom; daneben liegen ein Zertifikat aus Cambridge, ein Zugticket nach Paderborn und ein neues Notizbuch mit einem Berliner Bären auf dem Umschlag.
+> Regale ragen in die Dunkelheit, die Bücher summen leise. Über einem Lesetisch hängt ein gerahmtes Diplom, auf dem Tisch liegt aufgeschlagen eine dicke, gebundene Abschlussarbeit. Daneben: ein Zertifikat aus Cambridge, ein Zugticket nach Paderborn und ein neues Notizbuch mit einem Berliner Bären auf dem Umschlag. Das hohe Bücherregal hat drei Fächer: Software, Systeme sowie Daten & Mathematik.
 
-Seit 09/2026 Master in Data Science an der Freien Universität Berlin. Davor: B.Eng. Software Engineering an der Xidian University (2022–2026, GPA 3,8/4,0, Top 15 %), ein Austauschsemester an der Universität Paderborn und das Programm „Artificial Intelligence and Deep Learning“ der University of Cambridge (Endnote A).
+Seit 09/2026 Master in Data Science an der Freien Universität Berlin. Davor: B.Eng. Software Engineering an der Xidian University (2022–2026, GPA 3,8/4,0, Top 15 %; qualifiziert für die prüfungsfreie Zulassung zum Master und freiwillig verzichtet), ein Austauschsemester an der Universität Paderborn, gefördert vom International Office der Xidian University, und das Winterprogramm „Artificial Intelligence and Deep Learning“ der University of Cambridge (Endnote A).
 
 ## berlin: ein Berliner Notizbuch | berlin, notizbuch, fu, master
 FREIE UNIVERSITÄT BERLIN · M.Sc. Data Science
@@ -47,33 +47,86 @@ XIDIAN UNIVERSITY · B.Eng. Software Engineering
 08/2022 – 06/2026 · Xi'an, China
 Schwerpunkt: Cloud Computing & Big Data
 GPA 3,8 / 4,0 (Top 15 % des Studiengangs) · gewichteter Durchschnitt 86,7
-Stipendien: Stipendium zweiter Klasse (2023–2024), dritter Klasse (2022–2023)
+Qualifiziert für die Zulassung zum Master ohne nationale Aufnahmeprüfung (保研), freiwillig darauf verzichtet.
+Stipendien: zweiter Klasse (2023–2024), dritter Klasse (2022–2023)
 
-## thesis: eine gebundene Abschlussarbeit | abschlussarbeit, bachelorarbeit, thesis
-Bachelorarbeit: „Entwurf und Implementierung eines LLM-basierten Systems zur Plausibilitätsprüfung von Bankkundentransaktionen“, in Zusammenarbeit mit HSBC Technology.
-Die ganze Geschichte liegt auf der Werkbank in der Werkstatt: untersuche agent.
+Die Kurse stehen im Regal (untersuche bücherregal); die Abschlussarbeit liegt auf dem Tisch (untersuche abschlussarbeit).
 
-## cambridge: ein Zertifikat aus Cambridge | cambridge, zertifikat, deep learning
+## thesis: eine gebundene Abschlussarbeit | abschlussarbeit, bachelorarbeit, thesis, llm-txinsight
+BACHELORARBEIT · „Entwurf und Implementierung eines LLM-basierten Systems zur Plausibilitätsprüfung von Bankkundentransaktionen“
+Systemname: LLM-TxInsight · in Zusammenarbeit mit HSBC Technology · 12/2025 – 04/2026
+
+DAS PROBLEM
+Compliance-Analysten prüfen Kundenprofile und Transaktionshistorien von Hand. Das ist langsam, die Maßstäbe unterscheiden sich von Prüfer zu Prüfer, und unklare Transaktionen enden selten in einem eindeutigen, nachvollziehbaren Ergebnis.
+
+WAS ICH GEBAUT HABE
+Ein browserbasiertes System (Spring Boot 3 + LangChain4j, Vue 3, PostgreSQL). Man lädt ein Kundenprofil und eine Transaktionsdatei (Excel/CSV) hoch und bekommt einen dreiteiligen Bericht (Kundenüberblick, Transaktionsübersicht, Plausibilitätsurteil), exportierbar als Word-Datei.
+  · Stufenweise Analyse statt eines großen Prompts. Stufe 1 sucht klar auffällige Muster (große Ausreißer, Geld rein und sofort wieder raus, Gelder vieler Personen gebündelt). Stufe 2 bewertet die Plausibilität anhand von Beruf und Einkommen. Reichen die Belege nicht, stellt Stufe 3 gezielte Rückfragen an die Analysten (bis zu 3 Runden).
+  · Szenario-Skills: Regeln etwa für Überweisungen unter Verwandten, strukturierte Einlagen und Hochrisikoländer werden nur geladen, wenn ein Fall sie braucht; die Liste der Hochrisikoländer kommt aus der Datenbank statt aus dem Prompt.
+  · Ein Prüf-Agent kontrolliert jedes Ergebnis; widerspricht er dem Analyse-Agenten, entscheidet ein Mensch, und die Entscheidung wird gespeichert.
+  · Feedback der Analysten wird zu wiederverwendbaren Erfahrungen, auf die spätere Analysen zugreifen.
+  · 171 Backend-Testmethoden (JUnit 5, Mockito, Unit- und Integrationstests) plus Frontend-Komponententests (Vitest).
+
+EVALUATION · 500 annotierte Fälle (etwa 200 plausibel, 200 unplausibel, 100 brauchen einen Menschen)
+  · Qwen-plus: einfacher Prompt 50,0 % → Few-Shot + Chain-of-Thought 60,4 % → stufenweise Orchestrierung 68,0 %
+  · Bestes Ergebnis: Qwen3.6-max-preview mit Skills, 86,7 %. Qwen3-max mit Skills erreichte 83,1 % und damit mehr als die geforderten 80 %.
+  · Skills bei Bedarf zu laden senkte den Token-Verbrauch modellübergreifend um etwa 20–30 %.
+  · Das günstigste Modell (DeepSeek V4 Flash, etwa 0,03 ¥ pro Fall) erreichte nur 57,6 %: Die Modellwahl ist ein echter Kompromiss zwischen Genauigkeit und Kosten.
+
+WICHTIGSTE ERKENNTNISSE
+Die Aufgabe in fokussierte Stufen zu zerlegen brachte mehr Genauigkeit als Prompt-Tricks; die Kontextgröße ist ein Kostenhebel, den man gestalten kann; und einem System, das weiß, wann es einen Menschen fragen muss, vertraut man eher als einem, das immer antwortet.
+
+## cambridge: ein Zertifikat aus Cambridge | cambridge, zertifikat, deep learning, winterprogramm
 UNIVERSITY OF CAMBRIDGE · Department of Computer Science and Technology
-Programm „Artificial Intelligence and Deep Learning“, 12.–24. Februar 2024
-Geleitet von Prof. Nicholas D. Lane: Vorlesungen, Diskussionen und eine Gruppenpräsentation.
-Endnote: A. Die beste Teilnote (94 %) bekam ich in der studentisch geleiteten Lesegruppe, in der wir zentrale Deep-Learning-Paper vorgestellt und kritisch diskutiert haben.
+Winterprogramm „Artificial Intelligence and Deep Learning“, 12.–24. Februar 2024
+Geleitet von Prof. Nicholas D. Lane (Professor für Machine Learning Systems, Mitgründer von Flower Labs). Vorlesungen, Diskussionen und eine Gruppenpräsentation:
+  1. Warum Deep Learning so dominant wurde und welche Kräfte seine weitere Entwicklung bestimmen
+  2. Grundbausteine: Convolutional und Recurrent Networks, mit Code-Beispielen aus Bild- und Sprachverarbeitung
+  3. Moderne Bausteine: Residual Connections, Depthwise-Separable Convolutions, Channel Shuffle und Attention
+  4. Die Kunst des Trainings: wie Parameter aus statistischer Sicht gelernt werden und ein Schritt-für-Schritt-Rezept für das Training tiefer Modelle
+  5. Rechenaufwand: warum Deep Learning so teuer ist und wie Systeme und Algorithmen die Kosten senken
+  6. Die Forschungsfront: einflussreiche aktuelle Paper zerlegen und kritisch bewerten lernen
+  7. Eine studentisch geleitete Lesegruppe, in der wir zentrale Paper selbst vorgestellt und diskutiert haben
+Endnote: A.
 
 ## ticket: ein Zugticket nach Paderborn | ticket, zugticket, paderborn, austausch
 UNIVERSITÄT PADERBORN · Austauschstudent, 09/2024 – 03/2025
-Rechnernetze, grundlegende Algorithmen und mein erster Deutschkurs, gefördert durch das internationale Austauschprogramm der Xidian University.
+Gefördert vom International Office der Xidian University (国合部).
+Kurse: Rechnernetze, grundlegende Algorithmen und Deutsch (A1).
 Mein erstes Semester in Deutschland.
 
 ## bookshelf: ein Bücherregal | bücherregal, regal, bücher, kurse
-Auf den Buchrücken stehen die Kurse, die mich geprägt haben (Noten von 100):
-  · Numerische Analysis ............ 99
-  · Wahrscheinlichkeit & Statistik . 96
-  · Einführung in die Programmierung 96
-  · Informationssicherheit ......... 93
-  · Cloud Computing ................ 92
-  · Maschinelles Lernen & Data Mining 88
-  · Betriebssysteme ................ 88 (Projekt: 95)
-  · Datenstrukturen ................ 86
+Ein hohes Regal mit drei Fächern voller Fachkurse, die mich geprägt haben:
+  · Software-Fach ········ Programmierung, Datenstrukturen, Algorithmen, Architektur
+  · System-Fach ·········· Schaltungen, Rechnerarchitektur, Betriebssysteme, Cloud, Sicherheit
+  · Daten-&-Mathe-Fach ··· Statistik, Numerik, maschinelles Lernen, Information Retrieval
+Versuch:  untersuche software-fach
+
+## shelf-software: das Software-Fach | software-fach, software, programmierung
+  · Einführung in Informatik & Programmierung: richtig programmieren lernen: Kontrollfluss, Funktionen, Arrays, Zeiger und Speicher
+  · Python-Programmierung: idiomatisches Python und die Standardbibliothek
+  · Objektorientierte Programmierung: Klassen, Vererbung und Polymorphie; Code um Objekte herum organisieren
+  · Datenstrukturen: Listen, Stacks, Queues, Bäume, Graphen und Hashtabellen, dazu Sortieren und Suchen
+  · Entwurf und Analyse von Algorithmen: Divide and Conquer, dynamische Programmierung, Greedy, Backtracking, Komplexitätsanalyse
+  · Softwarearchitektur: Architekturstile, Qualitätsmerkmale und Entwurfsmuster und wie man zwischen ihnen wählt
+  · Softwareprozess & Projektmanagement: vom Wasserfall zu agilen Methoden, Schätzen, Planen, Risiken und Versionen managen
+  · Geistiges Eigentum & Softwareschutz: Urheberrecht, Patente und Open-Source-Lizenzen für Software
+
+## shelf-systems: das System-Fach | system-fach, systeme, hardware
+  · Schaltungen & Elektronik, Digitaltechnik: von Logikgattern zu kombinatorischen und sequentiellen Schaltungen
+  · Rechnerorganisation & -architektur: Befehlssätze, Datenpfad, Speicherhierarchie und Caches, mit Kursprojekt
+  · Betriebssysteme: Prozesse und Threads, Scheduling, Synchronisation, Speicherverwaltung und Dateisysteme, mit Kursprojekt
+  · Cloud Computing: Virtualisierung, Container, verteilte Speicherung und Berechnung
+  · Ingenieurpraktikum Cloud & Big Data: ein praktisches Teamprojekt in meinem Schwerpunkt
+  · Einführung in die Informationssicherheit: Kryptografie-Grundlagen, Authentifizierung, Zugriffskontrolle, typische Angriffe und Abwehr
+
+## shelf-data: das Daten-&-Mathe-Fach | daten-fach, mathe-fach, daten, mathe, ki
+  · Diskrete Mathematik: Logik, Mengen, Relationen, Graphen und Kombinatorik
+  · Wahrscheinlichkeit & Statistik: Verteilungen, Schätzen und Hypothesentests
+  · Numerische Analysis: Gleitkommafehler, Interpolation, numerische Integration und iterative Verfahren für Gleichungen
+  · Maschinelles Lernen & Data Mining: Regression, Klassifikation, Clustering, Modellbewertung und Assoziationsregeln
+  · Information Retrieval: invertierte Indizes, TF-IDF und Vektorraum-Ranking, Precision und Recall; die Ideen hinter heutigem RAG
+  · Algorithmen der Bioinformatik: Sequenz-Alignment mit dynamischer Programmierung
 
 # workshop: Die Werkstatt | Projekte & Fähigkeiten
 > Funken und Lötrauch. Auf der Werkbank zeigt ein Bildschirm, wie ein KI-Agent über eine Banktransaktion nachdenkt; daneben steht ein Terminal, das diesem hier verdächtig ähnlich sieht. Auf dem Boden steht ein abgenutzter Werkzeugkasten offen.
