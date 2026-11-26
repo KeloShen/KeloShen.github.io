@@ -22,8 +22,6 @@ Das Porträt zeigt Kunxiang Shen. Auf einem Messingschild steht:
   B.Eng. Software Engineering @ Xidian University
   Chinesisch (Muttersprache) · Englisch C1, IELTS 7.0 · Deutsch A1
 
-In einem Satz: ein Softwareentwickler, der LLM-Systeme von der Agenten-Pipeline bis zur CI/CD-Auslieferung baut.
-
 ## mirror: ein Spiegel | spiegel
 Dein Spiegelbild kräuselt sich und wird zu jemand anderem: meinem digitalen Ich. Es spricht:
 

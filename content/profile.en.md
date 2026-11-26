@@ -29,8 +29,6 @@ The portrait shows Kunxiang Shen. A brass plate reads:
   BEng Software Engineering @ Xidian University
   Mandarin (native) · English C1, IELTS 7.0 · German A1
 
-In one sentence: a software engineer who builds LLM-powered systems end to end, from the agent pipeline to the CI/CD that ships it.
-
 ## mirror: a mirror | mirror, reflection
 Your reflection ripples and becomes someone else: my digital self. It speaks:
 
