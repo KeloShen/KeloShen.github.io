@@ -48,7 +48,11 @@ body.ready .app { opacity: 1; }
 .brand { display: flex; align-items: center; gap: 10px; }
 .brand b { color: var(--accent); letter-spacing: .02em; font-family: var(--sans); font-weight: 600; }
 .brand .dim { font-family: var(--sans); font-size: 13px; }
-.avatar { width: 30px; height: 39px; image-rendering: pixelated; image-rendering: crisp-edges; flex: none; }
+.brand { position: relative; }
+.avatar { width: 36px; height: 36px; border-radius: 6px; flex: none; cursor: zoom-in; position: relative; z-index: 20;
+  transform-origin: top left; transition: transform .25s ease, box-shadow .25s ease; }
+.avatar:hover { transform: scale(7); border-radius: 2px; box-shadow: 0 4px 16px rgba(0,0,0,.25); }
+@media (hover: none) { .avatar:hover { transform: none; box-shadow: none; } }
 @keyframes pulse { 50% { opacity: .35; } }
 .bar-actions { display: flex; gap: 10px; align-items: center; }
 .ghost { background: transparent; border: 1px solid var(--line); padding: 4px 12px; border-radius: 4px; color: var(--fg); font-family: var(--sans); font-size: 13px; }
