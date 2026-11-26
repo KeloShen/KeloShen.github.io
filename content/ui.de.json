@@ -127,9 +127,9 @@
       "sudo": "[sudo] Zugriff gewährt. Angebot vorab angenommen. Jetzt tippe kontakt. :)"
     },
     "ai": {
-      "teaser": "Die Server summen. {n} Gespräche zu {topics} Themen archiviert. Versuch: untersuche terminal",
+      "teaser": "Die Server summen. Bisher archiviert: {n} kuratierte(s) Protokoll(e), {topics} Themen. Versuch: untersuche terminal",
       "statsTitle": "KI-NUTZUNG · ÜBERSICHT",
-      "meta": "{n} ausgewählte Gespräche · zuletzt aktualisiert {updated}",
+      "meta": "Kuratierte Protokolle: {n} · zuletzt aktualisiert {updated}",
       "tools": "Werkzeuge",
       "topics": "Top-Themen",
       "learnedTitle": "WAS ICH GELERNT HABE (KI-generierte Zusammenfassung)",

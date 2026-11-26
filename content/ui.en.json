@@ -140,9 +140,9 @@
       "sudo": "[sudo] permission granted. Offer letter accepted in advance. Now type contact. :)"
     },
     "ai": {
-      "teaser": "The servers hum. {n} conversations archived across {topics} topics. Try: examine terminal",
+      "teaser": "The servers hum. Archived so far: {n} curated log(s), {topics} topics. Try: examine terminal",
       "statsTitle": "AI USAGE · OVERVIEW",
-      "meta": "{n} curated conversations · last updated {updated}",
+      "meta": "Curated logs: {n} · last updated {updated}",
       "tools": "Tools",
       "topics": "Top topics",
       "learnedTitle": "WHAT I LEARNED (AI-generated summary)",
