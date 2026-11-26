@@ -1,6 +1,7 @@
 // Text-adventure engine: parsing, rooms, output queue, chips, autocomplete, ask.
 import { WORLD, DIRECTIONS } from "./world.js";
 import { pixelMapHTML } from "./pixelmap.js";
+import { contactHTML } from "./quickview.js";
 
 const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
 const isAscii = (s) => /^[\x00-\x7f]*$/.test(s);
@@ -280,11 +281,7 @@ export class Game {
   }
 
   cmd_contact() {
-    const c = this.config.contact;
-    const rows = [];
-    if (c.email) rows.push(`✉  <a href="mailto:${esc(c.email)}">${esc(c.email)}</a>`);
-    for (const k of ["github", "linkedin", "website"]) if (c[k]) rows.push(`↗  ${k}: <a href="${esc(c[k])}" target="_blank" rel="noopener">${esc(c[k])}</a>`);
-    this.print(`${esc(this.t("ui.contact"))}<br>${rows.join("<br>")}`, { html: true });
+    this.print(`${esc(this.t("ui.contact"))}${contactHTML(this.config.contact, this.config.resumeUrl, this.t("ui.downloadResume"))}`, { html: true });
   }
 
   async cmd_lang(rest) {

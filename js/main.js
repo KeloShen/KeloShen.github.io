@@ -3,6 +3,7 @@ import { WORLD, buildWorld } from "./world.js";
 import { I18n } from "./i18n.js";
 import { Game } from "./engine.js";
 import { runIntro } from "./intro.js";
+import { renderMarkdown, contactHTML } from "./quickview.js";
 
 const $ = (id) => document.getElementById(id);
 const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
@@ -61,38 +62,22 @@ i18n.onChange(() => { paintUI(); if (!$("quick").hidden) openQuickView(); game?.
 paintUI();
 
 // ---------- Quick View (plain résumé-style page) ----------
+// Quick View = content/quickview.<lang>.md rendered as a one-page résumé,
+// followed by the contact block (from the profile front matter).
+const quickCache = {};
+async function loadQuickView(lang) {
+  if (!(lang in quickCache)) {
+    quickCache[lang] = await fetch(`content/quickview.${lang}.md`, { cache: "no-cache" })
+      .then((r) => (r.ok ? r.text() : null)).catch(() => null);
+  }
+  return quickCache[lang];
+}
 async function openQuickView() {
-  const t = (k) => i18n.t(k);
-  let html = `<h1>${esc(CONFIG.name)}</h1><p class="dim">${esc(t("ui.quickIntro"))}</p>`;
-  let aiRoom = null;
-  for (const roomId of WORLD.order) {
-    const items = i18n.itemsOf(roomId);
-    const get = (k) => i18n.get(`rooms.${roomId}.items.${k}`) || {};
-    if (items.some((it) => get(it).ai)) { aiRoom = aiRoom || roomId; continue; }   // shown in the AI section below
-    const shown = items.filter((it) => !get(it).gameOnly);
-    const quick = i18n.get(`rooms.${roomId}.quick`);
-    if (!shown.length && !quick) continue;
-    html += `<section><h2>${esc(t(`rooms.${roomId}.section`))}</h2>`;
-    if (quick) html += `<p>${esc(t(`rooms.${roomId}.quick`))}</p>`;
-    for (const item of shown) {
-      html += `<h3>${esc(t(`rooms.${roomId}.items.${item}.label`))}</h3><p>${esc(t(`rooms.${roomId}.items.${item}.text`))}</p>`;
-    }
-    html += `</section>`;
-  }
+  const md = (await loadQuickView(i18n.lang)) ?? (await loadQuickView("en")) ?? `# ${CONFIG.name}`;
+  let html = renderMarkdown(md, { name: CONFIG.name });
   const ai = await game.loadAI();
-  const learned = (ai.learned || []).map((l) => `<li>${esc(i18n.pick(l))}</li>`).join("");
-  if (aiRoom) {
-    const quick = i18n.get(`rooms.${aiRoom}.quick`);
-    html += `<section><h2>${esc(t(`rooms.${aiRoom}.section`))}</h2>${quick ? `<p>${esc(t(`rooms.${aiRoom}.quick`))}</p>` : ""}`;
-    html += ai.sample ? `<p class="dim">${esc(t("ui.ai.soon"))}</p>` : `${ai.headline ? `<p>${esc(i18n.pick(ai.headline))}</p>` : ""}
-      <p class="dim">${esc(i18n.t("ui.ai.meta", { n: ai.totalChats ?? 0, updated: ai.updated || "—" }))}</p><ul>${learned}</ul>`;
-    html += `</section>`;
-  }
-  const c = CONFIG.contact;
-  html += `<section><h2>${esc(t("ui.contact"))}</h2><p>
-    ${c.email ? `<a href="mailto:${esc(c.email)}">${esc(c.email)}</a><br>` : ""}
-    ${["github", "linkedin", "website"].filter((k) => c[k]).map((k) => `<a href="${esc(c[k])}" target="_blank" rel="noopener">${esc(c[k])}</a>`).join("<br>")}
-    </p>${CONFIG.resumeUrl ? `<p><a href="${esc(CONFIG.resumeUrl)}" target="_blank" rel="noopener">${esc(t("ui.downloadResume"))} ↓</a></p>` : ""}</section>`;
+  if (ai && !ai.sample) html += `<p class="dim cv-note">${esc(i18n.t("ui.ai.meta", { n: ai.totalChats ?? 0, updated: ai.updated || "—" }))}</p>`;
+  html += `<h2>${esc(i18n.t("ui.contact"))}</h2>${contactHTML(CONFIG.contact, CONFIG.resumeUrl, i18n.t("ui.downloadResume"))}`;
   $("quick-body").innerHTML = html;
   $("quick").hidden = false;
   $("quick-close").focus();
